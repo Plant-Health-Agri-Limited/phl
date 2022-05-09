@@ -395,22 +395,22 @@ export default function ProductView(){
                         (index === 1)?
                         <Box>
                             <Grid container >
-                                <Grid xs={12} sm={6} md={4}>
+                                <Grid item xs={12} sm={6} md={4}>
                                     <Box sx={{ ...productListContainer }}>
                                         <CardDisplay productimage={final_k} productname="final K" productdetails="Final K" details_log="final_k" />
                                     </Box>
                                 </Grid>
-                                <Grid xs={12} sm={6} md={4}>
+                                <Grid item xs={12} sm={6} md={4}>
                                     <Box sx={{ ...productListContainer }}>
                                         <CardDisplay productimage={trador} productname="Tradebor Mo" productdetails="Tradebor Mo" details_log="tradebor_mo"/>
                                     </Box>
                                 </Grid>
-                                <Grid xs={12} sm={6} md={4}>
+                                <Grid item xs={12} sm={6} md={4}>
                                     <Box sx={{ ...productListContainer }}>
                                         <CardDisplay productimage={delfan} productname="Delfan Plus" productdetails="Delfan Plus" details_log="delfan_plus"/>
                                     </Box>
                                 </Grid>
-                                <Grid xs={12} sm={6} md={4}>
+                                <Grid item xs={12} sm={6} md={4}>
                                     <Box sx={{ ...productListContainer }}>
                                         <CardDisplay productimage={twin_tech} productname="Twintech ZnMn" productdetails="Twintech ZnMn" details_log="twintech"/>
                                     </Box>
@@ -424,22 +424,22 @@ export default function ProductView(){
                         (index === 2)?
                         <Box>
                             <Grid container >
-                                <Grid xs={12} sm={6} md={4}>
+                                <Grid item xs={12} sm={6} md={4}>
                                     <Box sx={{ ...productListContainer }}>
                                         <CardDisplay productimage={elite_bingo} productname="Bingo Elite" productdetails="Bing Elite" details_log="bingo_elite"/>
                                     </Box>
                                 </Grid>
-                                <Grid xs={12} sm={6} md={4}>
+                                <Grid item xs={12} sm={6} md={4}>
                                     <Box sx={{ ...productListContainer }}>
                                         <CardDisplay productimage={wakanda} productname="Wakanda Elite" productdetails="Wakanda Elite" details_log="wakanda_elite"/>
                                     </Box>
                                 </Grid>
-                                <Grid xs={12} sm={6} md={4}>
+                                <Grid item xs={12} sm={6} md={4}>
                                     <Box sx={{ ...productListContainer }}>
                                         <CardDisplay productimage={indingo_elite} productname="Indingo Elite" productdetails="Indingo Elite" details_log="indigo_elite"/>
                                     </Box>
                                 </Grid>
-                                <Grid xs={12} sm={6} md={4}>
+                                <Grid item xs={12} sm={6} md={4}>
                                     <Box sx={{ ...productListContainer }}>
                                         <CardDisplay productimage={elite_tribute} productname="Tribute Elite" productdetails="Tribute Elite" details_log="tribute_elite"/>
                                     </Box>
@@ -498,12 +498,12 @@ export default function ProductView(){
                         (index === 4)?
                         <Box>
                             <Grid container >
-                                <Grid xs={12} sm={6} md={4}>
+                                <Grid item xs={12} sm={6} md={4}>
                                     <Box sx={{ ...productListContainer }}>
                                         <CardDisplay productimage={centron} productname="Centron" productdetails="Centron" details_log="centron"/>
                                     </Box>
                                 </Grid>
-                                <Grid xs={12} sm={6} md={4}>
+                                <Grid item xs={12} sm={6} md={4}>
                                     <Box sx={{ ...productListContainer }}>
                                         <CardDisplay productimage={zenith} productname="Zenith" productdetails="Zenith" details_log="zenith"/>
                                     </Box>
@@ -518,17 +518,17 @@ export default function ProductView(){
                         (index === 5)?
                         <Box>
                             <Grid container >
-                                <Grid xs={12} sm={6} md={4}>
+                                <Grid item xs={12} sm={6} md={4}>
                                     <Box sx={{ ...productListContainer }}>
                                         <CardDisplay productimage={container} productname=""/>
                                     </Box>
                                 </Grid>
-                                <Grid xs={12} sm={6} md={4}>
+                                <Grid item xs={12} sm={6} md={4}>
                                     <Box sx={{ ...productListContainer }}>
                                         <CardDisplay productimage={container} productname=""/>
                                     </Box>
                                 </Grid>
-                                <Grid xs={12} sm={6} md={4}>
+                                <Grid item xs={12} sm={6} md={4}>
                                     <Box sx={{ ...productListContainer }}>
                                         <CardDisplay productimage={container} productname=""/>
                                     </Box>
@@ -1066,12 +1066,12 @@ export default function ProductView(){
                         (index === 8)?
                         <Box>
                             <Grid container >
-                                <Grid xs={12} sm={6} md={4}>
+                                <Grid item xs={12} sm={6} md={4}>
                                     <Box sx={{ ...productListContainer }}>
                                         <CardDisplay productimage={container} productname=""/>
                                     </Box>
                                 </Grid>
-                                <Grid xs={12} sm={6} md={4}>
+                                <Grid item xs={12} sm={6} md={4}>
                                     <Box sx={{ ...productListContainer }}>
                                         <CardDisplay productimage={container} productname=""/>
                                     </Box>

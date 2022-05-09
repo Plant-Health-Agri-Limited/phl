@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { 
     Box, 
     Grid, 
@@ -21,6 +21,7 @@ import herbicides_list from '../../../constants/herbicides_list';
 import fungicides_list from '../../../constants/fungicides_list';
 
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 const container = '/images/w_container.png'
 const elite_bingo = '/images/elite_bingo.jpg'
@@ -81,6 +82,7 @@ const bgcolor = '#F9F9F9'
 const bg2= "#F9F9F9"
 
 export default function ProductView(){
+    const router = useRouter()
     const[index, setIndex] = useState(1);
     const[categoryName, setCategoryName] = useState("liquid fertilizer");
     const[buttonActive, setButtonActive] = useState([true,false,false,false,false,false,false,false])
@@ -88,6 +90,63 @@ export default function ProductView(){
     const handleIndexChange = (event:any) =>{
         setIndex(parseInt(event.target.value));
     }
+
+    useEffect(() => {
+        if(router.query.productId){
+            const id = parseInt(String(router.query.productId))
+            setIndex(id)
+        }
+
+        if(parseInt(String(router.query.productId)) === 1){
+            setButtonActive([true,false,false,false,false,false,false,false])
+            setCategoryName("Liquid Fertilize")
+            setIndex(1);
+        }
+
+        if(parseInt(String(router.query.productId)) === 2){
+            setButtonActive([false,true,false,false,false,false,false,false])
+            setCategoryName("Herbicide Elite")
+            setIndex(2);
+        }
+
+        if(parseInt(String(router.query.productId)) === 9){
+            setButtonActive([false,false,false,false,false,false,false,false,true])
+            setCategoryName("Herbicides")
+            setIndex(9);
+        }
+
+        if(parseInt(String(router.query.productId)) === 3){
+            setButtonActive([false,false,true,false,false,false,false,false])
+            setCategoryName("Fungicide")
+            setIndex(3);
+        }
+
+        if(parseInt(String(router.query.productId)) === 4){
+            setButtonActive([false,false,false,true,false,false,false,false])
+            setCategoryName("Insecticide")
+            setIndex(4);
+        }
+
+        if(parseInt(String(router.query.productId)) === 5){
+            setButtonActive([false,false,false,false,true,false,false,false])
+            setCategoryName("Biologicals")
+            setIndex(5);
+        }
+
+        if(parseInt(String(router.query.productId)) === 6){
+            setButtonActive([false,false,false,false,false,true,false,false])
+            setCategoryName("Adjuvants")
+            setIndex(6);
+        }
+
+        if(parseInt(String(router.query.productId)) === 7){
+            setButtonActive([false,false,false,false,false,false,false,true])
+            setCategoryName("Seed Dressing")
+            setIndex(7);
+        }
+
+    }, [router.query.productId])
+    
 
     return(
         <Box
@@ -127,15 +186,14 @@ export default function ProductView(){
                             label="Category"
                             onChange={handleIndexChange}
                             >
-                            <MenuItem value={1}>Liquid Fertilize</MenuItem>
-                            <MenuItem value={2}>Herbicide Elite</MenuItem>
-                            <MenuItem value={9}>Herbicide</MenuItem>
-                            <MenuItem value={3}>Fungicide</MenuItem>
-                            <MenuItem value={4}>Insectcide</MenuItem>
-                            <MenuItem value={5}>Biologocals</MenuItem>
-                            <MenuItem value={6}>Code Stock</MenuItem>
-                            <MenuItem value={7}>Inauculants</MenuItem>
-                            <MenuItem value={8}>Seed Dressing</MenuItem>
+                                <MenuItem value={1}>Liquid Fertilize</MenuItem>
+                                <MenuItem value={2}>Herbicide Elite</MenuItem>
+                                <MenuItem value={9}>Herbicide</MenuItem>
+                                <MenuItem value={3}>Fungicide</MenuItem>
+                                <MenuItem value={4}>Insectcide</MenuItem>
+                                <MenuItem value={5}>Biologocals</MenuItem>
+                                <MenuItem value={6}>Adjuvants</MenuItem>
+                                <MenuItem value={7}>Seed Dressing</MenuItem>
                             </Select>
                         </FormControl>
                     </Box>
@@ -157,10 +215,6 @@ export default function ProductView(){
                         component="div"
                         sx={{
                             paddingRight:3
-                            // border:'1px solid #e8e8e8',
-                            // padding:3,
-                            // borderRadius:5,
-                            // backgroundColor:bgcolor
                         }}
                         >
                             <Box

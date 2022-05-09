@@ -55,7 +55,7 @@ export default function PartnersCard(props:any){
                         src={props.image}
                         variant="rounded"
                         style={{ 
-                            width: 300, 
+                            width: 250, 
                             height: 100,
                             objectFit:'cover'
                         }}/>

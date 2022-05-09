@@ -15,20 +15,24 @@ import Image from 'next/image';
 import routes from '../../constants/routes';
 import { useRouter } from 'next/router'
 
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
+
+import Collapse from '@mui/material/Collapse';
 
 const logo = '/images/phl_logo_color.png'
+const logo_bw = '/images/phl_logo_bw.png'
 
 var classNames = require('classnames');
 
 const mobile_drawer_text = {
-    borderBottom:'1px solid #d9d9d9',
     backgroundColor:'transparent',
     color:'white',
-    paddingLeft: 2,
     width: '100%',
-    fontSize: 16,
+    fontSize: 14,
     paddingTop: 1.5,
     paddingBottom: 1.5,
+    fontFamily:'Poppins Medium'
 }
 
 const buttonStyleMd={
@@ -60,6 +64,8 @@ const custbtn = {
 
 export default function Navbar(){
     const router = useRouter()
+    const [routepath, setRoutePath] = useState("")
+
     const [openDrawer, setOpenDrawer] = useState(false)
 
     const drawerStyled = classNames({
@@ -67,24 +73,15 @@ export default function Navbar(){
         'drawer-open':openDrawer
     })
 
-    const animatedSquaresRef = useRef(null)
-    
-    // @ts-ignore: Object is possibly 'null'.
-    const play = () => animatedSquaresRef.current.play();
-    // @ts-ignore: Object is possibly 'null'.
-    const reverse = () => animatedSquaresRef.current.reverse();
-
+    const [dropDownOpen, setDropDownOpen] = useState(false)
 
     useEffect(()=>{
         const mediaQuery = window.matchMedia('(min-width: 900px)');
         if (mediaQuery.matches) {
             // setOpenDrawer(true)
-            console.log("Does matches")
           } else {
-            console.log("Doesnt match")
           }
-
-    });
+    },[]);
 
     const [appbar, setAppbar] = useState(false)
 
@@ -107,10 +104,11 @@ export default function Navbar(){
         'before-scroll': !appbar,
         'after-scroll' : appbar
     })
-    
-    const [ buttonActive, setButtonActive] = useState([false,false,false,false,false])
 
-    const [drawerCss, setDrawerCss] = useState(false)
+    useEffect(()=>{
+        setRoutePath(router.route)
+    },[router.route])
+
 
     return(
             <Box className={appbarStyle}>
@@ -154,13 +152,12 @@ export default function Navbar(){
                         <Box sx={{...buttonStyleMd}} className="box-pad">
                             <button 
                                 className='custom-btn'
-                                onClick={()=>{
-                                    // setButtonActive([true,false,false,false,false])
+                                onClick={()=>{ 
                                     router.push(routes.home)
                                 }}
                                 >Home</button>
                             <div className={classNames({
-                                    'btn-line-clicked': buttonActive[0],
+                                    'btn-line-clicked': (routepath === routes.home)? true : false,
                                     'btn-line': true
                                 })}></div>
                         </Box>   
@@ -168,13 +165,11 @@ export default function Navbar(){
                             <button
                                 className='custom-btn'
                                 onClick={()=>{
-                                    // setButtonActive([false,true,false,false,false])
                                     router.push(routes.about)
-                                   
                                 }}
                                 >About</button>
                             <div className={classNames({
-                                    'btn-line-clicked': buttonActive[1],
+                                    'btn-line-clicked': (routepath === routes.about)? true : false,
                                     'btn-line': true
                                 })}></div>
                         </Box>
@@ -182,45 +177,108 @@ export default function Navbar(){
                             <button 
                                 className='custom-btn'
                                 onClick={()=>{
-                                    // setButtonActive([false,false,true,false,false])
                                     router.push(routes.products)
                                 }}
                                 >Products</button>
                                 <div className={classNames({
-                                    'btn-line-clicked': buttonActive[2],
+                                    'btn-line-clicked': (routepath === routes.products)? true : false,
                                     'btn-line': true
                                 })}></div>
                                 <Box className="dialog">
-                                    <Typography
-                                    component="div"
+                                    <Typography component="div">
+                                        <Box 
+                                        className="dialog-text"
                                         onClick={()=>{
-                                            // setButtonActive([false,false,true,false,false])
-                                            router.push(routes.products)
-                                        }} 
-                                    >
-                                        <Box className="dialog-text">
+                                            router.push({
+                                                pathname:routes.products,
+                                                query:{
+                                                    productId:1
+                                                }
+                                            })
+                                        }} >
                                             Liquid Fertiliser
                                         </Box>
-                                        <Box className="dialog-text">
+                                        <Box 
+                                        className="dialog-text"
+                                        onClick={()=>{
+                                            router.push({
+                                                pathname:routes.products,
+                                                query:{
+                                                    productId:2
+                                                }
+                                            })
+                                        }} >
+                                            Herbicide Elite
+                                        </Box>
+                                        <Box 
+                                        className="dialog-text"
+                                        onClick={()=>{
+                                            router.push({
+                                                pathname:routes.products,
+                                                query:{
+                                                    productId:9
+                                                }
+                                            })
+                                        }} >
                                             Herbicide
                                         </Box>
-                                        <Box className="dialog-text">
+                                        
+                                        <Box 
+                                        className="dialog-text"
+                                        onClick={()=>{
+                                            router.push({
+                                                pathname:routes.products,
+                                                query:{
+                                                    productId:3
+                                                }
+                                            })
+                                        }} >
                                             Fungicide
                                         </Box>
-                                        <Box className="dialog-text">
+                                        <Box 
+                                        className="dialog-text"
+                                        onClick={()=>{
+                                            router.push({
+                                                pathname:routes.products,
+                                                query:{
+                                                    productId:4
+                                                }
+                                            })
+                                        }} >
                                             Insecticide
                                         </Box>
-                                        <Box className="dialog-text">
+                                        <Box className="dialog-text"
+                                        onClick={()=>{
+                                            router.push({
+                                                pathname:routes.products,
+                                                query:{
+                                                    productId:5
+                                                }
+                                            })
+                                        }} >
                                             Biologicals
                                         </Box>
-                                        <Box className="dialog-text">
-                                            Code Stock
+                                        <Box className="dialog-text"
+                                        onClick={()=>{
+                                            router.push({
+                                                pathname:routes.products,
+                                                query:{
+                                                    productId:6
+                                                }
+                                            })
+                                        }} >
+                                            Adjuvants
                                         </Box>
-                                        <Box className="dialog-text">
+                                        <Box className="dialog-text"
+                                        onClick={()=>{
+                                            router.push({
+                                                pathname:routes.products,
+                                                query:{
+                                                    productId:7
+                                                }
+                                            })
+                                        }}>
                                             Inauculants
-                                        </Box>
-                                        <Box className="dialog-text">
-                                            Seed Dressing
                                         </Box>
                                     </Typography>
                                 </Box>
@@ -229,13 +287,12 @@ export default function Navbar(){
                             <button  
                                 className='custom-btn'
                                 onClick={()=>{
-                                    //setButtonActive([false,false,false,true,false])
                                     router.push(routes.contact)
                                     
                                 }}
                                 >Contact</button>
                                 <div className={classNames({
-                                    'btn-line-clicked': buttonActive[3],
+                                    'btn-line-clicked': (routepath === routes.contact)? true : false,
                                     'btn-line': true
                                 })}></div>
                         </Box>
@@ -243,12 +300,11 @@ export default function Navbar(){
                             <button 
                                 className='custom-btn'
                                 onClick={()=>{
-                                    //setButtonActive([false,false,false,false,true])
                                     router.push(routes.news)
                                 }}
                                 >News</button>
                                 <div className={classNames({
-                                    'btn-line-clicked': buttonActive[4],
+                                    'btn-line-clicked': (routepath === routes.news)? true : false,
                                     'btn-line': true
                                 })}></div>
                         </Box>
@@ -258,100 +314,263 @@ export default function Navbar(){
                                 sx={{...buttonStyleSm, textTransform: 'none'}} 
                                 variant="text"
                                 onClick={()=>{
-                                    console.log("clicked");
-                                    setOpenDrawer(true)
-                                    //play()
-                                }}
-                                >
-                                <DensityMediumIcon/>
+                                    if(openDrawer){
+                                        setOpenDrawer(false)
+                                    }else{
+                                        setOpenDrawer(true)
+                                    }
+                                }}>
+                                    {
+                                        (openDrawer)?
+                                            <CloseIcon/>
+                                        :   <DensityMediumIcon/>   
+                                    }
+                                
                             </Button>
                         </Box>
                         
                     </Toolbar>      
                 </Box>
 
-                    <Box 
-                        className={drawerStyled} >
-                
+                    <Box className={drawerStyled}>
                         <Box
-                            sx={{
-                                display:'flex',
-                                justifyContent:'end'
-                            }}>
-                                <button 
-                                    style={{ 
-                                        backgroundColor:'transparent',
-                                        border: 0,
-                                        color:'white'
+                        sx={{
+                            paddingLeft: 2,
+                            paddingTop:2
+                        }}>
+                            <Image
+                                src={logo_bw}
+                                width={"120"}
+                                height={"70"}
+                                objectFit="contain"
+                                alt=''
+                            />
+                            <Typography 
+                            component="div"
+                                    sx={{
+                                    ...mobile_drawer_text
+                                    }}>
+                                <Box 
+                                    
+                                    onClick={()=>{
+                                        setOpenDrawer(false)
+                                        router.push(routes.home)
+                                    }}
+                                    >Home</Box>
+                            </Typography>
+                            <Typography
+                            component="div"
+                                sx={{
+                                    display:'flex',
+                                    justifyContent:'space-between',
+                                    paddingRight:3,
+                                    backgroundColor:'transparent',
+                                    color:'white',
+                                    width: '100%',
+                                    fontSize: 14,
+                                    paddingTop: 1.5,
+                                    fontFamily:'Poppins Medium'
+                                }}>
+                                <Box
+                                sx={{
+                                    width:100
+                                }}
+                                onClick={()=>{
+                                    setOpenDrawer(false)
+                                    router.push(routes.products)
+                                }}>
+                                    Products
+                                </Box>
+                                <Box
+                                onClick={()=>{
+                                    if(dropDownOpen){
+                                        setDropDownOpen(false)
+                                    }
+                                    else{
+                                        setDropDownOpen(true)
+                                    }
+                                }}>
+                                    {
+                                        (dropDownOpen)?
+                                            <ArrowDropUpIcon/>
+                                        :   <ArrowDropDownIcon/>
+                                    }
+                                </Box>
+                            </Typography>
+                            <Collapse in={dropDownOpen}>
+                            <Typography
+                                component="div"
+                                sx={{
+                                    paddingLeft:3,
+                                    color:'#ebebeb',
+                                    fontFamily:'Poppins Regular',
+                                    fontSize:14,
+                                    marginBottom:2,
+                                    marginTop:2
+                                }}>
+                                    <Box
+                                    sx={{
+                                        marginBottom:2
                                     }}
                                     onClick={()=>{
-                                        console.log("clicked");
                                         setOpenDrawer(false)
+                                        router.push({
+                                            pathname:routes.products,
+                                            query:{
+                                                productId:1
+                                            }
+                                        })
+                                    }}>
+                                        Liquid Fertilzer
+                                    </Box>
+                                    <Box
+                                    sx={{
+                                        marginBottom:2
                                     }}
-                                    >
-                                    <CloseIcon/>
-                                </button>
-                            </Box>
-                        
-                        <Typography 
-                        component="div"
-                                sx={{
-                                   ...mobile_drawer_text
-                                }}>
-                            <Box 
+                                    onClick={()=>{
+                                        setOpenDrawer(false)
+                                        router.push({
+                                            pathname:routes.products,
+                                            query:{
+                                                productId:2
+                                            }
+                                        })
+                                    }}>
+                                        Herbicide Elite
+                                    </Box>
+                                    <Box
+                                    sx={{
+                                        marginBottom:2
+                                    }}
+                                    onClick={()=>{
+                                        setOpenDrawer(false)
+                                        router.push({
+                                            pathname:routes.products,
+                                            query:{
+                                                productId:9
+                                            }
+                                        })
+                                    }}>
+                                        Herbicide
+                                    </Box>
+                                    <Box
+                                    sx={{
+                                        marginBottom:2
+                                    }}
+                                    onClick={()=>{
+                                        setOpenDrawer(false)
+                                        router.push({
+                                            pathname:routes.products,
+                                            query:{
+                                                productId:3
+                                            }
+                                        })
+                                    }}>
+                                        Fungicide
+                                    </Box>
+                                    <Box
+                                    sx={{
+                                        marginBottom:2
+                                    }}
+                                    onClick={()=>{
+                                        setOpenDrawer(false)
+                                        router.push({
+                                            pathname:routes.products,
+                                            query:{
+                                                productId:4
+                                            }
+                                        })
+                                    }}>
+                                        Insecticide
+                                    </Box>
+                                    <Box
+                                    sx={{
+                                        marginBottom:2
+                                    }}
+                                    onClick={()=>{
+                                        setOpenDrawer(false)
+                                        router.push({
+                                            pathname:routes.products,
+                                            query:{
+                                                productId:5
+                                            }
+                                        })
+                                    }}>
+                                        Biologicals
+                                    </Box>
+                                    <Box
+                                    sx={{
+                                        marginBottom:2
+                                    }}
+                                    onClick={()=>{
+                                        setOpenDrawer(false)
+                                        router.push({
+                                            pathname:routes.products,
+                                            query:{
+                                                productId:6
+                                            }
+                                        })
+                                    }}>
+                                        Adjuvants
+                                    </Box>
+                                    <Box
+                                    sx={{
+                                        marginBottom:2
+                                    }}
+                                    onClick={()=>{
+                                        setOpenDrawer(false)
+                                        router.push({
+                                            pathname:routes.products,
+                                            query:{
+                                                productId:7
+                                            }
+                                        })
+                                    }}>
+                                        Inauculants
+                                    </Box>
+                                </Typography>
+                            </Collapse>
                                 
-                                onClick={()=>{
-                                    setOpenDrawer(false)
-                                }}
-                                >Home</Box>
-                        </Typography>
-                        <Typography
-                        component="div"
+                            <Typography
+                            component="div"
                             sx={{
                                 ...mobile_drawer_text
-                             }}>
-                            <Box
-                                onClick={()=>{
-                                    setOpenDrawer(false)
-                                }}
-                                >Products</Box>
-                        </Typography>
-                        <Typography
-                        component="div"
-                        sx={{
-                            ...mobile_drawer_text
-                         }}>
-                            <Box 
-                                
-                                onClick={()=>{
-                                    setOpenDrawer(false)
-                                }}
-                                >About</Box>
-                        </Typography>
-                        <Typography
-                        component="div"
-                        sx={{
-                            ...mobile_drawer_text
-                         }}>
-                            <Box 
-                                
-                                onClick={()=>{
-                                    setOpenDrawer(false)
-                                }}
-                                >Contacts</Box>
-                        </Typography>
-                        <Typography
-                        component="div"
-                        sx={{
-                            ...mobile_drawer_text
-                         }}>
-                            <Box 
-                                
-                                onClick={()=>{
-                                    setOpenDrawer(false)
-                                }}
-                                >News</Box>
-                        </Typography> 
+                            }}>
+                                <Box 
+                                    
+                                    onClick={()=>{
+                                        setOpenDrawer(false)
+                                        router.push(routes.about)
+                                    }}
+                                    >About</Box>
+                            </Typography>
+                            <Typography
+                            component="div"
+                            sx={{
+                                ...mobile_drawer_text
+                            }}>
+                                <Box 
+                                    
+                                    onClick={()=>{
+                                        setOpenDrawer(false)
+                                        router.push(routes.contact)
+                                    }}
+                                    >Contacts</Box>
+                            </Typography>
+                            <Typography
+                            component="div"
+                            sx={{
+                                ...mobile_drawer_text
+                            }}>
+                                <Box 
+                                    
+                                    onClick={()=>{
+                                        setOpenDrawer(false)
+                                        router.push(routes.news)
+                                    }}
+                                    >News</Box>
+                            </Typography> 
+                        </Box>
                     </Box>
             </Box>
               

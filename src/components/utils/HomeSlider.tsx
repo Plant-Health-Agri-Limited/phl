@@ -58,7 +58,7 @@ export default function HomeSlider()  {
                                     lg: 18,
                                     md: 15,
                                     sm: 15,
-                                    xs: 5
+                                    xs: 10
                                 }
                             }}>
                                 <Box sx={{
@@ -83,7 +83,7 @@ export default function HomeSlider()  {
                                             lg:56,
                                             md:48,
                                             sm:42,
-                                            xs:40
+                                            xs:28
                                         },
                                         padding:1,
                                         textAlign: 'center',
@@ -139,7 +139,7 @@ export default function HomeSlider()  {
                                         lg: 18,
                                         md: 15,
                                         sm: 15,
-                                        xs: 5
+                                        xs: 10
                                     }
                                 }}>
                                     <Box sx={{
@@ -167,7 +167,7 @@ export default function HomeSlider()  {
                                             lg:56,
                                             md:48,
                                             sm:42,
-                                            xs:40
+                                            xs:28
                                         },
                                         padding:1,
                                         textAlign: 'center',
@@ -224,7 +224,12 @@ function PrevArrow(props:any) {
                 width:'50px',
                 height:'50px',
                 borderRadius:50,
-                backgroundColor:'#ee7623',
+                backgroundColor:{
+                    lg:'#ee7623',
+                    md:'#ee7623',
+                    sm:'#ee7623',
+                    xs:'none'
+                },
                 boxShadow:'1px 1px 15px 1px rgba(0,0,0,0.2)',
                 zIndex:1,
             }}
@@ -253,7 +258,12 @@ function PrevArrow(props:any) {
                 width:'50px',
                 height:'50px',
                 borderRadius:50,
-                backgroundColor:'#ee7623',
+                backgroundColor:{
+                    lg:'#ee7623',
+                    md:'#ee7623',
+                    sm:'#ee7623',
+                    xs:'none'
+                },
                 boxShadow:'1px 1px 15px 1px rgba(0,0,0,0.2)',
                 zIndex:1,
             }}

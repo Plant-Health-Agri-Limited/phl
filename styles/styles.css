@@ -93,7 +93,7 @@ a.mail-link{
     font-size: 14px;
     cursor: pointer;
     font-family:"Poppins Medium";
-    color: rgb(59, 59, 59);
+    color: rgb(102, 102, 102);
 }
 
 
@@ -201,6 +201,9 @@ a.mail-link{
     color: rgb(8, 185, 44);
   }
 
+  .custom-btn:hover{
+    color: #4B9359;
+  }
   .custom-btn:hover + .btn-line{
     cursor: pointer;
     animation-name: example;
@@ -215,7 +218,7 @@ a.mail-link{
 
   /***/
   .drawer{
-    position: absolute;
+    position: fixed;
     background-color: #4B9359;
     top:0;
     left: -240px;
@@ -226,12 +229,16 @@ a.mail-link{
     z-index: 100;
   }
   .drawer-open{
-    position: absolute;
-    background-color: #4B9359;
+    position: fixed;
+    /* background-color: #4B9359; */
+    /* background-color: #4b9359; */
+    background: rgb(75,147,89);
+    background: linear-gradient(90deg, rgba(75,147,89,1) 1%, rgba(75,147,89,0.9108018207282913) 89%, rgba(75,147,89,0.8575805322128851) 100%);
     top:0;
     left: 0px;
-    width: 240px;
+    width: 270px;
     height: 100vh;
+    overflow-y: auto;
     box-shadow: 5px 0px 8px 0 rgba(0, 0, 0, 0.2);
     transition: left 0.25s;
     z-index: 100;

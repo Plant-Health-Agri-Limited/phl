@@ -1,0 +1,135 @@
+
+import { 
+    Box, 
+    Grid, 
+    Typography, 
+    Container
+ } from '@mui/material'
+
+import Image from 'next/image';
+
+const mail = '/images/mail.png'
+const mobile = '/images/mobile-phone.png'
+
+export default function ContactDetails(){
+    return(
+        <Box sx={{ width: '100%' }}>
+            <Box
+            sx={{
+                display:'flex',
+                justifyContent:'center',
+                // backgroundColor:'#F5F8F2',
+                paddingTop:3,
+                paddingBottom:8
+            }}>
+                
+                <Grid container >
+                    <Grid item xs={12} md={6} 
+                        sx={{
+                            border:'0px solid #dbdbdb',
+                            display:'flex',
+                            // justifyContent:'center',
+                            marginBottom:{
+                                lg: 0,
+                                md: 0,
+                                sm: 5,
+                                xs: 5
+                            }}}>
+                        <Box 
+                            sx={{ 
+                                maxWidth:'100%',
+                            }}>
+                            <Box
+                                sx={{
+                                    width:'100%', 
+                                    display:'flex',
+                                    marginBottom:2
+                                }}>
+                                <Box 
+                                    sx={{ 
+                                            width:'60px', 
+                                            height:'60px', 
+                                            display:'flex',
+                                            justifyContent:'center',
+                                            marginBottom:1,
+                                            marginRight:3,
+                                            borderRadius:'50px',
+                                            padding:1,
+                                            backgroundColor:'#4B9359'
+                                        }}>
+                                    <Image width={400} height={400} src={mail} alt=""/>
+                                </Box>
+                                <Typography component="div">
+                                    <Box
+                                        sx={{
+                                            textAlign: 'start',
+                                            fontFamily:"Poppins Regular",
+                                            fontSize:16
+                                        }} >
+                                        planthealth.ltd@gmail.com
+                                    </Box>
+                                    <Box
+                                        sx={{
+                                            textAlign: 'start',
+                                            fontFamily:"Poppins Regular",
+                                            fontSize:16
+                                        }} >
+                                        info@planthealthagri.com
+                                    </Box>
+                                </Typography>
+                            </Box>        
+                        </Box>
+                    </Grid>
+
+                    <Grid item xs={12} md={6} 
+                        sx={{
+                            border:'0px solid #dbdbdb',
+                            display:'flex',
+                            // justifyContent:'center',
+                            marginBottom:{
+                                lg: 0,
+                                md: 0,
+                                sm: 5,
+                                xs: 5
+                            }}}>
+                        <Box 
+                            sx={{ maxWidth:'100%', }}>
+                            <Box
+                                sx={{
+                                    width:'100%', 
+                                    display:'flex',
+                                    marginBottom:1,
+                                    
+                                }}>
+                                <Box 
+                                    sx={{ 
+                                        width:'60px', 
+                                        height:'60px', 
+                                        display:'flex',
+                                        justifyContent:'center',
+                                        marginBottom:1,
+                                        marginRight:3,
+                                        borderRadius:'50px',
+                                        padding:1,
+                                        backgroundColor:'#4B9359'
+                                    }}>
+                                    <Image width={400} height={400} src={mobile} alt=""/>
+                                </Box>
+                                <Typography component="div">
+                                    <Box
+                                        sx={{
+                                            textAlign: 'start',
+                                            fontFamily:"Poppins Regular",
+                                            fontSize:16
+                                        }}>
+                                        +260 977505031<br/>
+                                    </Box>
+                                </Typography>
+                            </Box>        
+                        </Box>
+                    </Grid>
+                </Grid>
+            </Box>
+        </Box>
+    );
+}

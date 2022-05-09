@@ -53,16 +53,19 @@ export default function PartnersSlider()  {
                 className="slider"
                 {...settings}>
                     <PartnersCard
+                        url="https://www.corteva.com/"
                         image={corteva}
                         description=" Protecting and preserving the source of our food and helping our agricultural communities thrive..."
 
                     />
                     <PartnersCard
+                        url="https://tradecorp.com.es/en/"
                         image={tradecorp_logo}
                         description=" Tradecorp are experts in micronutrients and speciality fertilisers. Founded in 1985 in Spain..."
 
                     />
                      <PartnersCard
+                        url="https://agriculture.basf.com/global/en.html"
                         image={basf_logo}
                         description=" We create chemistry for a sustainable future..."
 

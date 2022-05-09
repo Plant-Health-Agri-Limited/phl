@@ -3,6 +3,8 @@ import { Box, Grid, Typography, Container } from '@mui/material'
 import MailIcon from '@mui/icons-material/Mail';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import Image from 'next/image';
+import { useRouter } from 'next/router'
+import routes from '../../constants/routes';
 
 const logo = '/images/phl_logo_bw.png'
 
@@ -10,6 +12,7 @@ const grid_style = {
     marginBottom:5,
 }
 export default function Footer(){
+    const router = useRouter()
     return(
         <Box className="background-footer">
             <Container
@@ -153,6 +156,7 @@ export default function Footer(){
                                 type="button"
                                 onClick={
                                     ()=>{
+                                        router.push(routes.home)
                                     }
                                 }>
                                     Home
@@ -164,6 +168,7 @@ export default function Footer(){
                                 type="button"
                                 onClick={
                                     ()=>{
+                                        router.push(routes.about)
                                     }
                                 }>
                                     About
@@ -175,6 +180,7 @@ export default function Footer(){
                                 type="button"
                                 onClick={
                                     ()=>{
+                                        router.push(routes.products)
                                     }
                                 }>
                                     Products

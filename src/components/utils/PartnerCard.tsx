@@ -6,8 +6,10 @@ import {
     Avatar 
  } from '@mui/material'
 import VistWebsiteButton from './VistWebsiteButton';
+import { useRouter } from 'next/router'
 
 export default function PartnersCard(props:any){
+    const router = useRouter()
     return(
         <Box
             sx={{
@@ -78,7 +80,12 @@ export default function PartnersCard(props:any){
                                 display:'flex',
                                 justifyContent:'flex-start'
                             }}>
-                                <VistWebsiteButton>
+                                <VistWebsiteButton
+                                onClick={
+                                    ()=>{
+                                        window.open(props.url)
+                                    }
+                                }>
                                     visit website
                                 </VistWebsiteButton>
                             </Box>

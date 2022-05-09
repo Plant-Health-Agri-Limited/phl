@@ -101,7 +101,7 @@ export default function Navbar(){
 
     return () =>
         window.removeEventListener('scroll', listenScrollEvent);
-    }, ['appbar']);
+    }, [appbar]);
 
     const appbarStyle= classNames({
         'before-scroll': !appbar,

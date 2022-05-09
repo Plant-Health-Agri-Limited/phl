@@ -14,7 +14,7 @@ import {
  import LocationOnIcon from '@mui/icons-material/LocationOn';
  import MailIcon from '@mui/icons-material/Mail';
  import Navbar from '../../navs/Navbar';
-
+ import Image from 'next/image';
  const mail = '/images/mail.png'
  const mobile = '/images/mobile-phone.png'
  const us = '/images/spraying_tractor.png'
@@ -194,7 +194,7 @@ import {
                                             padding:1,
                                             backgroundColor:'#4B9359'
                                         }}>
-                                    <img style={{ width:'40px', height:'40px',  }} src={mail}/>
+                                    <Image width={400} height={400} src={mail} alt=""/>
                                 </Box>
                                 <Typography component="div">
                                     <Box
@@ -250,7 +250,7 @@ import {
                                         padding:1,
                                         backgroundColor:'#4B9359'
                                     }}>
-                                    <img style={{ width:'40px', height:'40px' }} src={mobile}/>
+                                    <Image width={400} height={400} src={mobile} alt=""/>
                                 </Box>
                                 <Typography component="div">
                                     <Box

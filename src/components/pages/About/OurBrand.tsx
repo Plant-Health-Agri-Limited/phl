@@ -155,7 +155,7 @@ function OurBrand(){
                                >
                                        Organisations across the board are becoming increasingly focused on achieving and demonstrating sound environmental performance. 
 
-                                        Plant Health Agri Ltd adheres to environmental responsibility of restoring farmland back to the original healthy condition, to eliminate pollution, renovate environment, back to nature and ensure human's health.
+                                        Plant Health Agri Ltd adheres to environmental responsibility of restoring farmland back to the original healthy condition, to eliminate pollution, renovate environment, back to nature and ensure human&apos;s health.
                                </Box>
                            </Typography>
                        </Box>

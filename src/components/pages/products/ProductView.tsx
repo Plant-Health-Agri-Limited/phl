@@ -3,17 +3,10 @@ import {
     Box, 
     Grid, 
     Typography, 
-    Container, 
-    Button,
-    Card,
-    CardMedia,
-    CardContent,
-    CardActions,
     InputLabel,
     MenuItem,
     FormControl,
     Select,
-    SelectChangeEvent,
     Divider
  } from '@mui/material'
 
@@ -23,7 +16,11 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow'
+import CardDisplay from './CardDisplay'
+import herbicides_list from '../../../constants/herbicides_list';
+import fungicides_list from '../../../constants/fungicides_list';
 
+import Image from 'next/image';
 
 const container = '/images/w_container.png'
 const elite_bingo = '/images/elite_bingo.jpg'
@@ -42,11 +39,6 @@ const kantor = '/images/kantor.svg'
 const union = '/images/union.svg' 
 const wuxal = '/images/WUXAL_Ascofol.jpg' 
 const terios =  '/images/WUXAL_Terios.jpg' 
-
-import CardDisplay from './CardDisplay'
-
-import herbicides_list from '../../../constants/herbicides_list';
-import fungicides_list from '../../../constants/fungicides_list';
 
 var classNames = require('classnames');
 
@@ -557,10 +549,10 @@ export default function ProductView(){
                                     marginBottom:2
                                 }}>
                                     <Box>
-                                        <img
+                                        <Image
+                                        width={80}
+                                        height={100}
                                         style={{ 
-                                            width: 80, 
-                                            objectFit:'contain',
                                             marginRight:7
                                         }}
                                         alt="Assist Product image"
@@ -615,10 +607,10 @@ export default function ProductView(){
                                     marginBottom:2
                                 }}>
                                     <Box>
-                                        <img
+                                        <Image
+                                        width={80}
+                                        height={100}
                                         style={{ 
-                                            width: 80, 
-                                            objectFit:'contain',
                                             marginRight:7
                                         }}
                                         alt="Assist Product image"
@@ -673,10 +665,10 @@ export default function ProductView(){
                                     marginBottom:2
                                 }}>
                                     <Box>
-                                        <img
+                                        <Image
+                                        width={80}
+                                        height={100}
                                         style={{ 
-                                            width: 80, 
-                                            objectFit:'contain',
                                             marginRight:7
                                         }}
                                         alt="Assist Product image"
@@ -731,10 +723,10 @@ export default function ProductView(){
                                     marginBottom:2
                                 }}>
                                     <Box>
-                                        <img
+                                        <Image
+                                        width={80}
+                                        height={100}
                                         style={{ 
-                                            width: 80, 
-                                            objectFit:'contain',
                                             marginRight:7
                                         }}
                                         alt="Assist Product image"
@@ -796,12 +788,13 @@ export default function ProductView(){
                                         sx={{
                                             marginRight:3
                                         }}>
-                                            <img
+                                            <Image
+                                            width={150}
+                                            height={100}
                                             style={{ 
-                                                width: 150, 
-                                                objectFit:'contain',
-                                                
+                                                marginRight:0
                                             }}
+                                            alt=""
                                             src={wuxal}/>
                                         </Box>
                                         <Box
@@ -907,11 +900,11 @@ export default function ProductView(){
                                         sx={{
                                             marginRight:3
                                         }}>
-                                            <img
+                                            <Image
+                                            width={150}
+                                            height={100}
                                             style={{ 
-                                                width: 150, 
-                                                objectFit:'contain',
-                                                
+                                                marginRight:7
                                             }}
                                             alt=""
                                             src={terios}/>

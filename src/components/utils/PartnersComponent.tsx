@@ -3,27 +3,15 @@ import {
     Grid, 
     Typography, 
     Container, 
-    Button,
-    Card,
-    CardMedia,
-    CardContent,
-    CardActions
 
  } from '@mui/material'
 
- import { useHistory } from 'react-router-dom'
- import CardView from './CardView';
 
  //images
-import corteva from '../assets/images/corteva.jpg'
-import Slider from "react-slick"
-import centron from '../assets/images/centron.jpg'
-import final_k from '../assets/images/final_k.jpg'
-import gramini_elite from '../../assets/images/gramini_elite.jpg'
-import wakanda from '../assets/images/wakanda.jpeg'
-import tradecorp_logo from '../assets/images/tradecorp_logo_2.png'
-import basf_logo from '../assets/images/basf_logo.png'
-import zoran from '../assets/images/zoran_elite.jpeg'
+import Image from 'next/image';
+const corteva = '/images/corteva.jpg'
+const tradecorp_logo = '/images/tradecorp_logo_2.png'
+const basf_logo = '/images/basf_logo.png'
 
 const wd="300px"
 const dc={
@@ -70,11 +58,11 @@ function PartnersComponent(){
                                 }
                             }
                         >
-                        <img 
-                            style={{ 
-                                height:200,
-                                objectFit:'contain'
-                            }} alt="corteva" src={corteva}/>
+                        <Image 
+                            width={200}
+                            height={200}
+                            objectFit='contain' 
+                            alt="corteva" src={corteva}/>
                     </Box>
                  </Grid>
                  <Grid item xs={12} md={4} lg={4} sx={centerContent}>
@@ -92,11 +80,11 @@ function PartnersComponent(){
                             }
                         }
                         >
-                        <img 
-                            style={{ 
-                                height:200,
-                                objectFit:'contain'
-                            }} alt="corteva" src={tradecorp_logo}/>
+                        <Image
+                        width={200}
+                        height={200}
+                        objectFit='contain'  
+                        alt="corteva" src={tradecorp_logo}/>
                     </Box>
                  </Grid>
                  <Grid item xs={12} md={4} lg={4} sx={centerContent}>
@@ -114,11 +102,11 @@ function PartnersComponent(){
                             }
                         }
                         >
-                        <img 
-                            style={{ 
-                                height:200,
-                                objectFit:'contain'
-                            }} alt="corteva" src={basf_logo}/>
+                        <Image
+                            width={200}
+                            height={200}
+                            objectFit='contain'  
+                            alt="corteva" src={basf_logo}/>
                     </Box>
                  </Grid>
              </Grid>

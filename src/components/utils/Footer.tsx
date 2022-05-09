@@ -188,6 +188,7 @@ export default function Footer(){
                             width={"140px"}
                             height={"100%"}
                             objectFit="contain"
+                            alt=''
                         />
                     </Grid>
                     <Grid item xs={12}  sx={grid_style} >

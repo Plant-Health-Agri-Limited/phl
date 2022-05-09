@@ -14,6 +14,8 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import CustomButton from './CustomButton';
 
+import { useRouter } from 'next/router'
+import routes from '../../constants/routes';
 const corteva = '/images/corteva.jpg'
 const tradecorp_logo = '/images/tradecorp_logo_2.png';
 const basf_logo = '/images/basf_logo.png'
@@ -31,7 +33,7 @@ const settings = {
   };
 
 export default function HomeSlider()  {
-
+    const router = useRouter()
     
     return (
             <Box
@@ -112,7 +114,10 @@ export default function HomeSlider()  {
                                     justifyContent:'cenTer',
                                     width:'100%'
                                 }}>
-                                    <CustomButton>
+                                    <CustomButton
+                                    onClick={()=>{
+                                        router.push(routes.products)
+                                    }}>
                                         see our prodructs
                                     </CustomButton>
                                 </Box>
@@ -194,7 +199,10 @@ export default function HomeSlider()  {
                                     display:'flex',
                                     justifyContent:'center'
                                 }}>
-                                    <CustomButton>
+                                    <CustomButton
+                                    onClick={()=>{
+                                        router.push(routes.about)
+                                    }}>
                                         find out more...
                                     </CustomButton>
                                 </Box>

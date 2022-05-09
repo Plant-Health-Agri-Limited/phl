@@ -3,16 +3,18 @@ import {
     Box, 
     Grid, 
     Typography, 
-    Container, 
     Button,
-    Card,
-    CardMedia,
-    CardContent,
-    CardActions
 
  } from '@mui/material'
+import Image from 'next/image';
+
+import { useRouter } from 'next/router';
+import routes from '../../../constants/routes';
+
+import CustomButton from '../../utils/CustomButton';
 
 function Description(){
+    const router = useRouter()
     return(
         <Box sx={{ 
                 marginBottom: 10, 
@@ -57,17 +59,12 @@ function Description(){
                         </Box>
                     </Typography>
                     <Box sx={{ display:'flex', justifyContent:'center' }}>
-                        <Button 
-                            onClick={
-                                ()=>{
-                                }
-                            }
-                            variant="contained"
-                            sx={{
-                                backgroundColor: '#4B9359',
-                                width: 100,
-                            }}
-                        >more</Button>
+                        <CustomButton
+                        onClick={()=>{
+                            router.push(routes.about)
+                        }}>
+                            more...
+                        </CustomButton>
                     </Box>
                 </Grid>
             </Grid>

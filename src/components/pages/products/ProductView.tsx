@@ -196,6 +196,7 @@ export default function ProductView(){
                                 <MenuItem value={5}>Biologocals</MenuItem>
                                 <MenuItem value={6}>Adjuvants</MenuItem>
                                 <MenuItem value={7}>Seed Dressing</MenuItem>
+                                
                             </Select>
                         </FormControl>
                     </Box>

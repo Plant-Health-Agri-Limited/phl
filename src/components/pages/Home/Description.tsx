@@ -6,12 +6,40 @@ import {
     Button,
 
  } from '@mui/material'
-import Image from 'next/image';
-
+ 
 import { useRouter } from 'next/router';
 import routes from '../../../constants/routes';
 
 import CustomButton from '../../utils/CustomButton';
+
+const DescriptionText = ({children}:any)=>{
+    return(
+        <Typography component="div" 
+        sx={{ 
+            marginBottom: {
+                lg:0,
+                md:0,
+                sm:0,
+                xs:2
+            },
+            fontSize: {
+                lg:18,
+                md:18,
+                sm:18,
+                xs:16
+            },
+            textAlign:{
+                lg:'center',
+                md:'center',
+                sm:'center',
+                xs:'start'
+            },
+            fontFamily:"Poppins Regular, Arial" 
+        }}>
+            {children}
+        </Typography>
+    );
+}
 
 function Description(){
     const router = useRouter()
@@ -30,35 +58,65 @@ function Description(){
             
             <Grid container 
             sx={{
-                width: '80%',
-                border:'1px solid #d9d9d9',
-                padding:3,
+                width: '90%',
+                // border:{
+                //     lg:'1px solid #d9d9d9',
+                //     md:'1px solid #d9d9d9',
+                //     sm:'1px solid #d9d9d9',
+                //     xs:'0px solid #d9d9d9'
+                // },
+                padding:{
+                    lg:3,
+                    md:3,
+                    sm:2,
+                    xs:1
+                },
                 borderRadius:5 
             }}>
                 <Grid item xs={12} >
-                    <Typography component="div" sx={{ marginBottom: 2 }}>
-                        <Box
-                            sx={{
-                                fontSize: 28,
-                                marginBottom: 2,
-                                textAlign:'center',
-                                fontFamily:"Poppins Regular, Arial"
-                            }}
-                        >
-                            Plant Health Agri Limited
-                        </Box>
-                        <Box
-                            sx={{
-                                fontSize: 18,
-                                textAlign:'center',
-                            }}>
-                            Plant Health Agri Ltd is a wholly owned Zambian Company that is specialised in phytosanitary distribution. <br/>
-                            We work with both small scale and commecial farmers customising crop protection solutions. <br/>We pride ourselves as leaders in nanopesticides in central and southern Africa.<br/>
-                            We help farmers reduce environmental impact and improve efficiency on fertilisers and perticides.
-                            
-                        </Box>
+                    <Typography 
+                    component="div"
+                        sx={{
+                            fontSize: {
+                                lg:28,
+                                md:28,
+                                sm:28,
+                                xs:24
+                            },
+                            marginBottom: 1,
+                            textAlign:{
+                                lg:'center',
+                                md:'center',
+                                sm:'center',
+                                xs:'start'
+                            },
+                            fontFamily:"Poppins Medium, Arial"
+                        }} >
+                        Plant Health Agri Limited
                     </Typography>
-                    <Box sx={{ display:'flex', justifyContent:'center' }}>
+                    <DescriptionText>
+                        Plant Health Agri Ltd is a wholly owned Zambian Company that is specialised in phytosanitary distribution.
+                    </DescriptionText>
+                    <DescriptionText>
+                        We work with both small scale and commecial farmers customising crop protection solutions.
+                    </DescriptionText>
+                    <DescriptionText>
+                        We pride ourselves as leaders in nanopesticides in central and southern Africa.
+                    </DescriptionText>
+                    <DescriptionText>
+                        We help farmers reduce environmental impact and improve efficiency on fertilisers and perticides.
+                    </DescriptionText>
+                    <Box 
+                        sx={{ 
+                            display:'flex', 
+                            justifyContent:{
+                                lg:'center',
+                                md:'center',
+                                sm:'center',
+                                xs:'center'
+                            },
+                            marginTop:2 
+                        }}>
                         <CustomButton
                         onClick={()=>{
                             router.push(routes.about)

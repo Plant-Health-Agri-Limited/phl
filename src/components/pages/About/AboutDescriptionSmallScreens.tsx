@@ -15,6 +15,7 @@ function AboutDescriptionSmallScreens(){
     return(
         <Container 
         sx={{
+            marginTop: 10,
             marginBottom: 15,
             display:{
                 lg:'none',
@@ -23,20 +24,19 @@ function AboutDescriptionSmallScreens(){
                 xs:'block'
             }
         }}>
-           <Box sx={{        
+           <Box sx={{
+                           
                    backgroundColor: 'white',
-                   marginBottom: 5,
-                   paddingTop: 10
+                   marginBottom: 3,
+                   
                }}>
-                   <Typography
-                       component="div">
+                   <Typography component="div">
                        <Box
                            sx={{
                                fontSize: 24,
                                textAlign: 'center',
                                color:'#DD9933',
-                               marginBottom: 1,
-                               fontFamily:'Poppins Medium',
+                               fontFamily:'Poppins Bold',
                            }}>
                            OUR BRAND
                        </Box>
@@ -45,9 +45,8 @@ function AboutDescriptionSmallScreens(){
                                fontSize: 20,
                                textAlign: 'center',
                                color:'black',
-                               marginBottom: 4,
-                               fontFamily:'Poppins Medium Italic',
-                               fontStyle:'italic'
+                               marginBottom: 1,
+                               fontFamily:'Poppins Medium',
                            }}>
                            Who we are and What we do
                        </Box>
@@ -71,7 +70,7 @@ function AboutDescriptionSmallScreens(){
                                <Box
                                    sx={{
                                        fontWeight:200,
-                                       fontSize: 18,
+                                       fontSize: 20,
                                        textAlign: 'start',
                                        color:'black',
                                        marginBottom: 1,
@@ -83,19 +82,19 @@ function AboutDescriptionSmallScreens(){
                                <Box
                                    sx={{
                                        fontWeight: 500,
-                                       fontSize: 18,
+                                       fontSize: 16,
                                        textAlign: 'start',
-                                       padding:0
+                                       fontFamily:'Poppins Regular',
                                    }}>
                                    We continually seeking cost-effective crop protection solution to help the farmer to produce high quality and high yielding crops. 
                                    
                                </Box>
                            </Typography>
-                           <button
+                           {/* <button
                            className='contact-button' 
                            type="button">
                                Learn More
-                           </button>
+                           </button> */}
                        </Box>
                    </Grid>
                    <Grid item xs={12}>
@@ -146,7 +145,7 @@ function AboutDescriptionSmallScreens(){
 
                                <Box
                                    sx={{
-                                       fontSize: 24,
+                                       fontSize: 20,
                                        textAlign: 'start',
                                        color:'black',
                                        marginBottom: 1,
@@ -158,18 +157,18 @@ function AboutDescriptionSmallScreens(){
                                <Box
                                    sx={{
                                        fontWeight: 500,
-                                       fontSize: 18,
+                                       fontSize: 16,
                                        textAlign: 'start',
-                                       padding:0
+                                       fontFamily:'Poppins Regular',
                                    }}>
-                                   <br/>Our product range has expanded and we are positioning ourselves as a leading distributor of crop protection solution by acquiring distribution rights from major global company which includes Corteva, Tradecorp, Interagro UK and Bancella among others.
+                                   Our product range has expanded and we are positioning ourselves as a leading distributor of crop protection solution by acquiring distribution rights from major global company which includes Corteva, Tradecorp, Interagro UK and Bancella among others.
                                </Box>
                            </Typography>
-                           <button
+                           {/* <button
                            className='contact-button' 
                            type="button">
                                Learn More
-                           </button>
+                           </button> */}
                        </Box>
                    </Grid>
                    <Grid item xs={12}>

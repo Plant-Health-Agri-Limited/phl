@@ -35,12 +35,10 @@ function AboutDescription(){
                        component="div">
                        <Box
                            sx={{
-                               fontWeight:200,
-                               fontSize: 24,
+                               fontSize:24,
                                textAlign: 'center',
                                color:'#DD9933',
-                               marginBottom: 1,
-                               fontFamily:'Poppins Medium',
+                               fontFamily:'Poppins Bold',
                            }}>
                            OUR BRAND
                        </Box>
@@ -50,8 +48,7 @@ function AboutDescription(){
                                textAlign: 'center',
                                color:'black',
                                marginBottom: 4,
-                               fontFamily:'Poppins Medium Italic',
-                               fontStyle:'italic'
+                               fontFamily:'Poppins Medium'
                            }}
                        >
                            Who we are and What we do
@@ -61,15 +58,19 @@ function AboutDescription(){
                    <Grid item xs={12} md={6}>
                        <Box
                            sx={{
-                               width:'100%',
-                               paddingLeft:5
+                                width:'100%',
+                                paddingLeft:5,
+                                borderRadius:5,
+                                // backgroundColor:'#fafafa',
+                                // boxShadow:'0px 5px 15px -3px rgba(0,0,0,0.2)',
+                                height:400
                            }}>
                            <Typography
                            component="div"
                                sx={{
                                    width:'100%',
                                    marginBottom:5,
-                                   paddingTop:7
+                                   paddingTop:10
                                }}>
 
                                <Box
@@ -134,8 +135,12 @@ function AboutDescription(){
                    <Grid item xs={12} md={6}>
                        <Box
                            sx={{
-                               width:'100%',
-                               paddingLeft:7
+                                width:'100%',
+                                paddingLeft:5,
+                                borderRadius:5,
+                                // backgroundColor:'#f5f5f5',
+                                height:400,
+                                paddingTop:7
                            }}>
                            <Typography
                            component="div"

@@ -14,7 +14,7 @@ import Head from "next/head";
 
 const theme = createTheme({
   typography: {
-    fontFamily: ["Helvetica", "Arial", "sans-serif"].join(","),
+    fontFamily: ["Poppins Regular","Helvetica", "Arial", "sans-serif"].join(","),
   },
 });
 

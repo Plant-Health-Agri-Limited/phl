@@ -340,10 +340,10 @@ a.mail-link{
   }
 
   .contact-button{
-    border: 1px solid #DD9933;
-    height: 50px;
+    border: 1px solid #f7865c;
+    height: 40px;
     width: 100px;
-    background-color: #DD9933;
+    background-color: #f7865c;
     color: white;
     border-radius: 5px;
     font-size: 16px;

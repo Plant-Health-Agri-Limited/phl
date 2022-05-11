@@ -42,18 +42,16 @@ function OurBrand(){
                        fontSize: 24,
                        textAlign: 'center',
                        color:'#DD9933',
-                       marginBottom: 1,
-                       fontFamily:'Poppins Medium',
+                       fontFamily:'Poppins Bold',
                    }}>
                    OUR BRAND
                </Box>
                <Box
                    sx={{
-                        fontSize: 20,
+                        fontSize: 18,
                         textAlign: 'center',
                         color:'black',
-                        fontFamily:'Poppins Medium Italic',
-                        fontStyle:'italic'
+                        fontFamily:'Poppins Medium',
                    }}>
                    What We Believe In
                </Box>

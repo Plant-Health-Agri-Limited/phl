@@ -97,7 +97,7 @@ function OurBrand(){
                            </Box>
                            <Box
                                sx={{
-                                   fontSize: 18,
+                                   fontSize: 16,
                                    textAlign: 'center',
                                }}
                            >
@@ -147,7 +147,7 @@ function OurBrand(){
                                </Box>
                                <Box
                                    sx={{
-                                       fontSize: 18,
+                                       fontSize: 16,
                                        textAlign: 'center',
                                    }}
                                >
@@ -200,7 +200,7 @@ function OurBrand(){
                                </Box>
                                <Box
                                    sx={{
-                                       fontSize: 18,
+                                       fontSize: 16,
                                        textAlign: 'center',
                                    }}
                                >
@@ -250,7 +250,7 @@ function OurBrand(){
                                    </Box>
                                    <Box
                                        sx={{
-                                           fontSize: 18,
+                                           fontSize: 16,
                                            textAlign: 'center',
                                        }}
                                    >

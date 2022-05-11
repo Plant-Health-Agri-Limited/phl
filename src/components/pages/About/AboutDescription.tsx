@@ -87,7 +87,7 @@ function AboutDescription(){
                                <Box
                                    sx={{
                                        fontWeight: 500,
-                                       fontSize: 18,
+                                       fontSize: 16,
                                        textAlign: 'start',
                                        padding:0
                                    }}>
@@ -161,7 +161,7 @@ function AboutDescription(){
                                
                                <Box
                                    sx={{
-                                       fontSize: 18,
+                                       fontSize: 16,
                                        textAlign: 'start',
                                    }}>
                                     Our product range has expanded and we are positioning ourselves as a leading distributor of crop protection solution by acquiring distribution rights from major global company which includes Corteva, Tradecorp, Interagro UK and Bancella among others.

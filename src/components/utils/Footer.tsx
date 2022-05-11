@@ -191,8 +191,8 @@ export default function Footer(){
                     <Grid item xs={12} sm={6} md={3} lg={3} sx={grid_style} >
                         <Image
                             src={logo}
-                            width={"140px"}
-                            height={"100%"}
+                            width={"140"}
+                            height={"50"}
                             objectFit="contain"
                             alt=''
                         />

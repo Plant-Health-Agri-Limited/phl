@@ -66,7 +66,8 @@ export default function ProductDescription(props:any){
         </Box>
         <Box 
         sx={{ 
-            width:1
+            width:1,
+            fontSize:16,
         }}>
             { props.children }
         </Box>

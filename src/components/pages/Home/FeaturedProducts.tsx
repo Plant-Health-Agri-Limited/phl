@@ -4,16 +4,11 @@ import {
     Grid, 
     Typography, 
     Container, 
-    Button,
-    Card,
-    CardMedia,
-    CardContent,
-    CardActions
 
  } from '@mui/material'
 
-const centron = '/images/centron.jpg'
-const final_k = '/images/final_k.jpg'
+const centron = '/images/centron.png'
+const final_k = '/images/final_k.png'
 const wakanda = '/images/wakanda.jpeg'
 const zoran = '/images/zoran_elite.jpeg'
 

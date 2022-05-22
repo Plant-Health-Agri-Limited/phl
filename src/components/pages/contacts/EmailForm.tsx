@@ -14,17 +14,56 @@ import SendButton from '../../utils/SendButton';
 import { useFormik } from 'formik';
 import { SpinnerDotted } from 'spinners-react';
 import { testGetData } from '../../../services/methods';
-import Slide from '@mui/material/Slide';
+import Fade from '@mui/material/Fade';
+
+interface Errors {
+    email: string,
+    subject: string,
+    message: string
+}
 
 const sleep = (ms:number) => new Promise((r) => setTimeout(r, ms));
+
+export function SingleErrorMessage(props:any){
+    return(
+        (props.errormessage)?
+        <Box sx={{ color: 'red', textAlign:'center', fontSize:14, marginBottom:2 }}>
+            {props.errormessage}
+        </Box>
+        :<></>
+    )
+}
 
 export default function EmailForm(){
     const [sent, setSent] = useState(false)
     const formik = useFormik({
+        validateOnChange:false,
+        validateOnBlur:false,
         initialValues: {
           email: '',
           subject:'',
           message:''
+        },
+        validate: (values)=>{
+            const errors = {} as Errors
+
+            if (!values.email) {
+                errors.email = 'email cannot be empty'
+            }
+
+            else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+                errors.email = 'invalid email address';
+            }
+
+            if (!values.subject) {
+                errors.subject = 'subject cannot be empty'
+            }
+
+            if (!values.message) {
+                errors.message = 'message cannot be empty'
+            }
+
+            return errors
         },
 
         onSubmit: async (values) => {
@@ -86,7 +125,7 @@ export default function EmailForm(){
                     </Box>
                     :<></>
                 }
-                <Slide direction="up" in={sent} mountOnEnter unmountOnExit>
+                <Fade in={sent} >
                     <Box
                     sx={{
                         position:'absolute',
@@ -101,17 +140,19 @@ export default function EmailForm(){
                         sx={{
                             textAlign:'center',
                             backgroundColor:'#ffa566',
-                            borderRadius:4,
+                            borderRadius:2,
                             fontSize:14,
                             paddingLeft:1,
                             paddingRight:1,
+                            paddingTop:1.5,
                             boxShadow:'0px 1px 10px -3px rgba(0,0,0,0.2)',
-                            color:'white'
+                            color:'white',
+                            height:50
                         }}>
                             Email sent successfully!
                         </Typography>
                     </Box>
-                </Slide>
+                </Fade>
                 {
                     (false)?
                     <Box
@@ -127,15 +168,15 @@ export default function EmailForm(){
                         component="div"
                         sx={{
                             textAlign:'center',
-                            backgroundColor:'white',
-                            borderRadius:4,
+                            backgroundColor:'#ffedef',
+                            borderRadius:2,
                             fontSize:14,
                             paddingLeft:1,
                             paddingRight:1,
                             boxShadow:'0px 1px 10px -3px rgba(0,0,0,0.2)',
                             color:'red',
-                            height:30,
-                            paddingTop:0.5
+                            paddingTop:1.5,
+                            height:50
                         }}>
                             Email not sent, try again!
                         </Typography>
@@ -153,6 +194,7 @@ export default function EmailForm(){
                             name="email" 
                             onChange={formik.handleChange}
                             value={formik.values.email}/>
+                        <SingleErrorMessage errormessage={formik.errors.email}/>
                     </Box>
                     <Box sx={{width:'100%', marginBottom:1}}>
                         <label className="label-form">Subject</label>
@@ -163,6 +205,7 @@ export default function EmailForm(){
                             name="subject"
                             onChange={formik.handleChange}
                             value={formik.values.subject}/>
+                            <SingleErrorMessage errormessage={formik.errors.subject}/>
                     </Box>
                     <Box sx={{width:'100%', marginBottom:1}}>
                         <label className="label-form">Message</label>
@@ -179,6 +222,7 @@ export default function EmailForm(){
                             onChange={formik.handleChange}
                             value={formik.values.message}>
                         </textarea>
+                        <SingleErrorMessage errormessage={formik.errors.message}/>
                     </Box>
                     <Box
                     sx={{ 

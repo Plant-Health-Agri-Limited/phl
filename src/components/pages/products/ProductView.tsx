@@ -55,8 +55,36 @@ export default function ProductView(){
 
     const handleIndexChange = (event:any) =>{
         setIndex(parseInt(event.target.value));
+        
     }
 
+    useEffect(()=>{
+        switch(index){
+            case 1:
+                setCategoryName("Liquid Fertilize")
+                break;
+            case 2:
+                setCategoryName("Herbicide Elite")
+                break;
+            case 3:
+                setCategoryName("Fungicide")
+                break;
+            case 4:
+                setCategoryName("Insecticide")
+                break;
+            case 5:
+                setCategoryName("Biologicals")
+                break;
+            case 6:
+                setCategoryName("Adjuvants")
+                break;
+            case 7:
+                setCategoryName("Seed Dressing")
+                break;
+            case 9:
+                setCategoryName("Herbicides")
+        }
+    },[index])
     useEffect(() => {
         if(router.query.productId){
             const id = parseInt(String(router.query.productId))
@@ -365,8 +393,21 @@ export default function ProductView(){
                     paddingLeft:1,
                     // paddingRight:1,
                 }}>
-                    <Box sx={{ marginBottom: 2 }}>
-                        <Typography component="div">
+                    <Box 
+                    sx={{ 
+                        marginBottom: 2,
+                        
+                    }}>
+                        <Typography 
+                        component="div"
+                        sx={{
+                            display:{
+                            lg:'block',
+                            md:'none',
+                            sm:'none',
+                            xs:'none'
+                        }
+                        }}>
                             <Box
                                 sx={{
                                     fontWeight: 700,

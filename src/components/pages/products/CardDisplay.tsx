@@ -4,12 +4,12 @@ import {
     Typography, 
     Card,
     CardContent,
-    Button
  } from '@mui/material'
 
  import DetailsDisplay from './DetailsDisplay'
  import Image from 'next/image'
- 
+ import MoreDetailsButton from '../../utils/MoreDetailsButton'
+
  export default function CardDisplay(props:any){
     const [openDialog, setOpenDailog] = useState(false)
     return(
@@ -19,7 +19,7 @@ import {
                 border:'1px solid #e8e8e8',
                 width:{
                     sm:270,
-                    xs:1
+                    xs:300
                 }, 
                 marginBottom: 2, 
             }} >
@@ -101,16 +101,16 @@ import {
                         xs:'block'
                     }
                 }}>
-                    <Button
-                        sx={{
-                            textTransform:'none'
-                        }}
+                    <MoreDetailsButton
+                        // sx={{
+                        //     textTransform:'none'
+                        // }}
                         variant="outlined"
                         size="small"
                         fullWidth
                         onClick={()=>{ setOpenDailog(true) }}>
                         More details
-                    </Button>
+                    </MoreDetailsButton>
                 </Box>
             </CardContent>
             

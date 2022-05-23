@@ -75,30 +75,30 @@ export default function SeedDressig(){
                             </TableHead>
                             <TableBody>
                                 <TableRow>
-                                    <TableCell component="th" scope="row">
+                                    <TableCell component="td" scope="row">
                                         1.0
                                     </TableCell>
-                                    <TableCell component="th" scope="row">
+                                    <TableCell component="td" scope="row">
                                         Co
                                     </TableCell>
-                                    <TableCell component="th" scope="row">
+                                    <TableCell component="td" scope="row">
                                         Cobalt
                                     </TableCell>
-                                    <TableCell component="th" scope="row">
+                                    <TableCell component="td" scope="row">
                                         15
                                     </TableCell>
                                 </TableRow>
                                 <TableRow>
-                                    <TableCell component="th" scope="row">
+                                    <TableCell component="td" scope="row">
                                         10.4
                                     </TableCell>
-                                    <TableCell component="th" scope="row">
+                                    <TableCell component="td" scope="row">
                                         Mo
                                     </TableCell>
-                                    <TableCell component="th" scope="row">
+                                    <TableCell component="td" scope="row">
                                         Molybdenum
                                     </TableCell>
-                                    <TableCell component="th" scope="row">
+                                    <TableCell component="td" scope="row">
                                         150
                                     </TableCell>
                                 </TableRow>
@@ -175,114 +175,116 @@ export default function SeedDressig(){
                         WUXAL Terios Zn is a micronutrient suspension for Seed Treatment with B, Cu, Mn, Mo, Zn, N and S. The composition of WUXAL Terios Zn meets the specific requirements of cereals, especially for crops with higher zinc requirement (wheat and corn) or when growing on soils with low zinc availability.
                     </Box>
                     <TableContainer>
-                        <TableHead>
-                            <TableRow>
-                                <TableCell>% w/w</TableCell>
-                                <TableCell align="right"></TableCell>
-                                <TableCell align="right"></TableCell>
-                                <TableCell align="right">g/l</TableCell>
-                            </TableRow>
-                        </TableHead>
-                        <TableBody>
-                            <TableRow>
-                                <TableCell component="th" scope="row">
-                                    7.5
-                                </TableCell>
-                                <TableCell component="th" scope="row">
-                                    N
-                                </TableCell>
-                                <TableCell component="th" scope="row">
-                                    Nitrogen
-                                </TableCell>
-                                <TableCell component="th" scope="row">
-                                    102
-                                </TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell component="th" scope="row">
-                                    1.0
-                                </TableCell>
-                                <TableCell component="th" scope="row">
-                                    S
-                                </TableCell>
-                                <TableCell component="th" scope="row">
-                                    Sulphur
-                                </TableCell>
-                                <TableCell component="th" scope="row">
-                                    13.7
-                                </TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell component="th" scope="row">
-                                    0.2
-                                </TableCell>
-                                <TableCell component="th" scope="row">
-                                    B
-                                </TableCell>
-                                <TableCell component="th" scope="row">
-                                    Boron
-                                </TableCell>
-                                <TableCell component="th" scope="row">
-                                    2.74
-                                </TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell component="th" scope="row">
-                                    1.5
-                                </TableCell>
-                                <TableCell component="th" scope="row">
-                                    Cu
-                                </TableCell>
-                                <TableCell component="th" scope="row">
-                                    Copper
-                                </TableCell>
-                                <TableCell component="th" scope="row">
-                                    20.55
-                                </TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell component="th" scope="row">
-                                    0.5
-                                </TableCell>
-                                <TableCell component="th" scope="row">
-                                    Mn
-                                </TableCell>
-                                <TableCell component="th" scope="row">
-                                    Manganese
-                                </TableCell>
-                                <TableCell component="th" scope="row">
-                                    6.85
-                                </TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell component="th" scope="row">
-                                    0.1
-                                </TableCell>
-                                <TableCell component="th" scope="row">
-                                    Mo
-                                </TableCell>
-                                <TableCell component="th" scope="row">
-                                    Molybdenum
-                                </TableCell>
-                                <TableCell component="th" scope="row">
-                                    1.37
-                                </TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell component="th" scope="row">
-                                    4.0
-                                </TableCell>
-                                <TableCell component="th" scope="row">
-                                    Zn
-                                </TableCell>
-                                <TableCell component="th" scope="row">
-                                    Zinc
-                                </TableCell>
-                                <TableCell component="th" scope="row">
-                                    54.8
-                                </TableCell>
-                            </TableRow>
-                        </TableBody>
+                        <Table>
+                            <TableHead>
+                                <TableRow>
+                                    <TableCell>% w/w</TableCell>
+                                    <TableCell align="right"></TableCell>
+                                    <TableCell align="right"></TableCell>
+                                    <TableCell align="right">g/l</TableCell>
+                                </TableRow>
+                            </TableHead>
+                            <TableBody>
+                                <TableRow>
+                                    <TableCell component="td" scope="row">
+                                        7.5
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        N
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        Nitrogen
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        102
+                                    </TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell component="td" scope="row">
+                                        1.0
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        S
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        Sulphur
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        13.7
+                                    </TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell component="td" scope="row">
+                                        0.2
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        B
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        Boron
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        2.74
+                                    </TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell component="td" scope="row">
+                                        1.5
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        Cu
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        Copper
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        20.55
+                                    </TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell component="td" scope="row">
+                                        0.5
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        Mn
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        Manganese
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        6.85
+                                    </TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell component="td" scope="row">
+                                        0.1
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        Mo
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        Molybdenum
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        1.37
+                                    </TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell component="td" scope="row">
+                                        4.0
+                                    </TableCell>
+                                    <TableCell component="th" scope="row">
+                                        Zn
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        Zinc
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        54.8
+                                    </TableCell>
+                                </TableRow>
+                            </TableBody>
+                        </Table>
                     </TableContainer>
                     <Box
                     sx={{

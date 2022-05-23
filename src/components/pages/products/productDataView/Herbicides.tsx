@@ -15,27 +15,29 @@ export default function Herbicides(){
                 <TableContainer sx={{ marginBottom: 2 }}>
                     <Table size="small">
                         <TableHead>
-                            <TableCell component="th" scope="row">
-                            </TableCell>
-                            <TableCell component="th" scope="row">
-                                Products
-                            </TableCell>
-                            <TableCell component="th" scope="row">
-                                Active Ingridient
-                            </TableCell>
+                            <TableRow>
+                                <TableCell component="td" scope="row">
+                                </TableCell>
+                                <TableCell component="td" scope="row">
+                                    Products
+                                </TableCell>
+                                <TableCell component="td" scope="row">
+                                    Active Ingridient
+                                </TableCell>
+                            </TableRow>
                         </TableHead>
                         <TableBody>
                             {
                                 herbicides_list.map((data, index)=>{
                                     return(
                                         <TableRow key={index}>
-                                            <TableCell component="th" scope="row">
+                                            <TableCell component="td" scope="row">
                                                 {index + 1}
                                             </TableCell>
-                                            <TableCell component="th" scope="row">
+                                            <TableCell component="td" scope="row">
                                                 {data.product}
                                             </TableCell>
-                                            <TableCell component="th" scope="row">
+                                            <TableCell component="td" scope="row">
                                                 {data.active_ingridient}
                                             </TableCell>
                                         </TableRow>

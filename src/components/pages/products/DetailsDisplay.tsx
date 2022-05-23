@@ -60,7 +60,7 @@ export default function DetailsDisplay(props:any){
                             width:'100%',
                             height: '90%'
                         }}>
-                            <Typography>
+                            <Typography component="div">
                                 <Box sx={{ 
                                         color: 'black',
                                         fontSize: 16, 
@@ -163,7 +163,7 @@ export default function DetailsDisplay(props:any){
                             width:'100%',
                             height: '90%'
                         }}>
-                            <Typography>
+                            <Typography component="div">
                                 <Box sx={{ 
                                         color: 'black',
                                         fontSize: 16, 
@@ -226,7 +226,7 @@ export default function DetailsDisplay(props:any){
                             width:'100%',
                             height: '90%'
                         }}>
-                            <Typography>
+                            <Typography component="div">
                                 <Box sx={{ 
                                         color: 'black',
                                         fontSize: 16, 
@@ -287,7 +287,7 @@ export default function DetailsDisplay(props:any){
                             width:'100%',
                             height: '90%'
                         }}>
-                            <Typography>
+                            <Typography component="div">
                                 <Box sx={{ 
                                         color: 'black',
                                         fontSize: 16, 
@@ -331,7 +331,7 @@ export default function DetailsDisplay(props:any){
                             height: '90%',
                             overflowY:'auto'
                         }}>
-                            <Typography>
+                            <Typography component="div">
                                 <Box sx={{ 
                                         color: 'black',
                                         fontSize: 16, 
@@ -349,7 +349,8 @@ export default function DetailsDisplay(props:any){
                                     Wakanda Elite
                                 </Box>
 
-                                <Typography sx={{ width:'100%', marginBottom:1, fontSize:14 }}>
+                                <Typography component="div" 
+                                sx={{ width:'100%', marginBottom:1, fontSize:14 }}>
                                     <Box>Haloxyfop 6% | Clethodim 12% ME</Box>
                                     <Box>700ml/ha</Box>
                                 </Typography>
@@ -400,7 +401,7 @@ export default function DetailsDisplay(props:any){
                             height: '90%',
                             overflowY:'auto'
                         }}>
-                            <Typography>
+                            <Typography component="div">
                                 <Box sx={{ 
                                         color: 'black',
                                         fontSize: 16, 
@@ -417,7 +418,8 @@ export default function DetailsDisplay(props:any){
                                     }}>
                                     Tribute Elite
                                 </Box>
-                                <Typography sx={{ width:'100%', marginBottom:1, fontSize:14 }}>
+                                <Typography component="div" 
+                                sx={{ width:'100%', marginBottom:1, fontSize:14 }}>
                                     <Box>Metribuzin 20% ME </Box>
                                     <Box>1.5 liters/ha </Box>
                                 </Typography>
@@ -464,7 +466,7 @@ export default function DetailsDisplay(props:any){
                             height: '90%',
                             overflowY:'auto'
                         }}>
-                            <Typography>
+                            <Typography component="div">
                                 <Box sx={{ 
                                         color: 'black',
                                         fontSize: 16, 
@@ -481,7 +483,8 @@ export default function DetailsDisplay(props:any){
                                     }}>
                                     Tribute Elite
                                 </Box>
-                                <Typography sx={{ width:'100%', marginBottom:1, fontSize:14 }}>
+                                <Typography component="div" 
+                                sx={{ width:'100%', marginBottom:1, fontSize:14 }}>
                                     <Box>Imazethapyr 4.5% ME</Box>
                                     <Box>600cc/ha </Box>
                                 </Typography>
@@ -509,7 +512,7 @@ export default function DetailsDisplay(props:any){
                             height: '90%',
                             overflowY:'auto'
                         }}>
-                            <Typography>
+                            <Typography component="div">
                                 <Box sx={{ 
                                         color: 'black',
                                         fontSize: 16, 
@@ -526,7 +529,8 @@ export default function DetailsDisplay(props:any){
                                     }}>
                                     Centron
                                 </Box>
-                                <Typography sx={{ width:'100%', marginBottom:1, fontSize:14 }}>
+                                <Typography component="div" 
+                                sx={{ width:'100%', marginBottom:1, fontSize:14 }}>
                                     <Box>Abamectin 2% + Lufenuron 5% ME</Box>
                                     <Box>120ml/ha  </Box>
                                 </Typography>
@@ -573,7 +577,7 @@ export default function DetailsDisplay(props:any){
                             height: '90%',
                             overflowY:'auto'
                         }}>
-                            <Typography>
+                            <Typography component="div">
                                 <Box sx={{ 
                                         color: 'black',
                                         fontSize: 16, 
@@ -590,7 +594,8 @@ export default function DetailsDisplay(props:any){
                                     }}>
                                     Zenith
                                 </Box>
-                                <Typography sx={{ width:'100%', marginBottom:1, fontSize:14 }}>
+                                <Typography component="div" 
+                                sx={{ width:'100%', marginBottom:1, fontSize:14 }}>
                                     <Box>Lambda Cyhalothrin 2.5% ME</Box>
                                     <Box>40ml/ha </Box>
                                 </Typography>

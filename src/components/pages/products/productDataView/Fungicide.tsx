@@ -15,14 +15,16 @@ export default function Fungicide(){
             <TableContainer sx={{ marginBottom: 2 }}>
                 <Table size="small">
                     <TableHead>
-                        <TableCell component="th" scope="row">
-                        </TableCell>
-                        <TableCell component="th" scope="row">
-                            Products
-                        </TableCell>
-                        <TableCell component="th" scope="row">
-                            Active Ingridient
-                        </TableCell>
+                        <TableRow>
+                            <TableCell component="th" scope="row">
+                            </TableCell>
+                            <TableCell component="th" scope="row">
+                                Products
+                            </TableCell>
+                            <TableCell component="th" scope="row">
+                                Active Ingridient
+                            </TableCell>
+                        </TableRow>
                     </TableHead>
                     <TableBody>
                         {

@@ -64,7 +64,7 @@ export default function HomeSlider()  {
                                 <Box sx={{
                                     width:'100%'
                                 }}>
-                                    <Box sx={{
+                                    {/* <Box sx={{
                                             width:'100%',
                                             color: 'white',
                                             fontFamily:'Poppins Medium',
@@ -73,7 +73,7 @@ export default function HomeSlider()  {
                                             // borderBottom:'5px solid white'
                                         }}>
                                         PHL
-                                    </Box>
+                                    </Box> */}
                                 </Box>
                                 <Box sx={{
                                         width:'100%',
@@ -145,7 +145,7 @@ export default function HomeSlider()  {
                                     <Box sx={{
                                         width:'100%'
                                     }}>
-                                    <Box sx={{
+                                    {/* <Box sx={{
                                             width:'100%',
                                             color: 'white',
                                             fontFamily:'Poppins Medium',
@@ -154,7 +154,7 @@ export default function HomeSlider()  {
                                             // borderBottom:'5px solid white'
                                         }}>
                                         PHL
-                                    </Box>
+                                    </Box> */}
                                 </Box>
                                     
                                 <Box 

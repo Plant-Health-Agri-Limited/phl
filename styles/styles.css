@@ -1,3 +1,9 @@
+:root {
+  --background_mage_1: #1e90ff;
+  --background_mage_2: #ffffff;
+}
+
+
 /* Fonts */
 @font-face {
   font-family: "Poppins Medium Italic";
@@ -315,10 +321,11 @@ a.mail-link{
     position: absolute;
     width: 100%;
     height: 460px;
-    background-image: url('/images/lady_field.png');
+    background-image: url('/images/women_farming.png');
     background-repeat: no-repeat;  
     background-size: cover;
     z-index: -1;
+    background-position: 0px 0px;
     animation: shrink 10s infinite alternate ;
   }
 
@@ -423,7 +430,7 @@ a.mail-link{
       border-color: white;
       width: 100%;
       height: 460px;
-      background-image: url('/images/lady_field.png');
+      background-image: url('/images/women_farming.png');
       background-repeat: no-repeat;  
       background-size: cover;
       animation: shrink 10s infinite alternate ;
@@ -445,7 +452,7 @@ a.mail-link{
       .backgroud-2{
         width: 100%;
         height: 460px;
-        background-image: url('/images/lady_field.png');
+        background-image: url('/images/women_farming.png');
         background-repeat: no-repeat;  
         background-size: cover;
         animation-play-state: paused;

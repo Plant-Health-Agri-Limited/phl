@@ -27,7 +27,7 @@ export default function DetailsDisplay(props:any){
                 backgroundColor: 'rgba(28, 28, 28, 0.5)',
                 boxShadow: '0 4px 20px 5px rgba(0, 0, 0, 0.2)',
                 zIndex: 100,
-                
+                fontSize:16
             }}>
                 <Box sx={{
                         paddingLeft: 5, 

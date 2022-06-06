@@ -28,8 +28,6 @@ const centerCard={
     padding:1
 }
 function FeaturedProducts(){
-    
-  
     return(
         <Box 
             sx={{

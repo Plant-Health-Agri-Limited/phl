@@ -7,6 +7,7 @@ import {
  } from '@mui/material'
 import VistWebsiteButton from './VistWebsiteButton';
 import { useRouter } from 'next/router'
+import Image from 'next/image';
 
 export default function PartnersCard(props:any){
     const router = useRouter()
@@ -51,14 +52,21 @@ export default function PartnersCard(props:any){
                         marginBottom:1,
                         
                     }}>
-                        <Avatar 
+                        {/* <Avatar 
                         src={props.image}
                         variant="rounded"
                         style={{ 
                             width: 250, 
                             height: 100,
-                            objectFit:'cover'
-                        }}/>
+                            objectFit:'contain'
+                        }}/> */}
+                        <Image
+                            src={props.image}
+                            width={250} 
+                            height={100}
+                            objectFit="contain"
+                        />
+                        
                         <Box
                         sx={{
                             paddingLeft:{

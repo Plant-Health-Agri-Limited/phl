@@ -24,7 +24,7 @@ const tact = '/images/field_tractor.png'
                     <Typography
                     component="div" 
                     sx={{ paddingTop: 15}}>
-                        <Box 
+                        {/* <Box 
                             sx={{
                                 width:'100%',
                                 color: 'white',
@@ -34,7 +34,7 @@ const tact = '/images/field_tractor.png'
                                 // borderBottom:'5px solid white'
                             }}>
                             PHL
-                        </Box>
+                        </Box> */}
                         <Box sx={{
                             color: 'white',
                             fontFamily:'Poppins Bold',

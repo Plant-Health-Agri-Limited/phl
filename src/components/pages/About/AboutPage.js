@@ -32,8 +32,8 @@ import {
             }}>
                 <Typography
                 component="div" 
-                sx={{ paddingTop: 12}}>
-                    <Box 
+                sx={{ paddingTop: 15}}>
+                    {/* <Box 
                         sx={{
                             width:'100%',
                             color: 'white',
@@ -43,7 +43,7 @@ import {
                             // borderBottom:'5px solid white'
                         }}>
                         PHL
-                    </Box>
+                    </Box> */}
                     <Box sx={{
                         color: 'white',
                         fontWeight:'bold',

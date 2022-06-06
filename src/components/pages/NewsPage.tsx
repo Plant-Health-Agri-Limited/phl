@@ -67,8 +67,8 @@ import {
                 backgroundRepeat:'no-repeat',  
                 backgroundSize: 'cover'
                 }}>
-                <Typography component="div" sx={{ paddingTop: 12}}>
-                    <Box sx={{
+                <Typography component="div" sx={{ paddingTop: 15}}>
+                    {/* <Box sx={{
                             width:'100%'
                         }}>
                         <Box sx={{
@@ -81,7 +81,7 @@ import {
                             }}>
                             PHL
                         </Box>
-                    </Box>
+                    </Box> */}
                     <Box sx={{
                         color: 'white',
                         fontFamily:'Poppins Bold',

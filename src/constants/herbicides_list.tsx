@@ -5,14 +5,14 @@ const herbicides_list = [
         product: "2,4-D 860 SL",
         active_ingridient: " 2, 4 D Amine, 860g/l SL "
     },
-    {
-        product:"ACAMOS",
-        active_ingridient: "Metobromuron 600g/lt"
-    },
-    {
-        product:"AMETRYN 50% SC ",
-        active_ingridient: "Ametryn 50% SC"
-    },
+    // {
+    //     product:"ACAMOS",
+    //     active_ingridient: "Metobromuron 600g/lt"
+    // },
+    // {
+    //     product:"AMETRYN 50% SC ",
+    //     active_ingridient: "Ametryn 50% SC"
+    // },
     {
         product:"BASAGRAN 480 SL ",
         active_ingridient: "Bentazon 480g/lt"

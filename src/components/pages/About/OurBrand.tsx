@@ -14,8 +14,226 @@ import {
 
 const center_grid_content={
     display:'flex',
-    justifyContent:'center'
+    justifyContent:'center',
 }
+
+const font_size='16px'
+
+function OurVision(){
+    return(
+        <Box sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            marginBottom:5
+        }}> 
+            <Typography
+            component="div"
+            sx={{ 
+                width:{
+                    lg:500,
+                    md:500,
+                    sm:500,
+                    xs:'100%'
+                }
+            }}>
+                <Box 
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'center'
+                    }}>
+                    <Avatar
+                        alt=""
+                        src={leaf}
+                        sx={{
+                            width:"60px",
+                            height:"60px"
+                        }}
+                    />
+                </Box>
+                <Box
+                    sx={{
+                         fontFamily:'Poppins Medium',
+                        fontSize: 20,
+                        textAlign: 'center',
+                    }}>
+                        Our Visions
+                </Box>
+                <Box
+                    sx={{
+                        fontSize: font_size,
+                        textAlign: 'justify',
+                    }}>
+                     To become a leading supplier of crop protection products in the region and help farmers to utilize and maximise resource efficiency, eliminate or minimize product hazards to create durable solutions for farmers.
+                </Box>
+            </Typography>
+        </Box>
+    )
+}
+
+
+function EnvironmentAndSus(){
+    return(
+        <Box sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            marginBottom:5
+        }}>
+            <Typography
+            component="div"
+            sx={{ 
+                 width:{
+                     lg:500,
+                     md:500,
+                     sm:500,
+                     xs:'100%'
+                 }
+            }}>
+                <Box 
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'center'
+                    }}>
+                    <Avatar
+                        alt=""
+                        src={leaf}
+                        sx={{
+                            width:"60px",
+                            height:"60px"
+                        }}
+                    />
+                </Box>
+                <Box
+                    sx={{
+                         fontFamily:'Poppins Medium',
+                         fontSize: 20,
+                         textAlign: 'center',
+                    }}
+                >
+                        Environment & Sustainability
+                </Box>
+                <Box
+                    sx={{
+                        fontSize: font_size,
+                        textAlign: 'justify',
+                    }}
+                >
+                     We work with small holder and commercial farmers to conserve the environment and protect lives. We focus on strengthening and feeding the crops, making the crops able to defend and fight for themselves. <br/><br/>With our nanotechnology, farmers are applying 35% to 50% less pesticides to their farm land. With our suspension technology, farmers are applying less quantities of fertilisers per hectar but achieving even better results.<br/><br/>  We train small holder farmers in Good Agriculture Practices (GAP), safe use of pesticides and other sustainable farming methods like intergrated paste management and organic farming.
+                </Box>
+            </Typography>
+        </Box>
+    )
+}
+
+function OurValues(){
+    return(
+        <Box sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            marginBottom:5
+        }}>
+            <Typography
+            component="div"
+            sx={{ 
+                width:{
+                    lg:500,
+                    md:500,
+                    sm:500,
+                    xs:'100%'
+                }
+            }}>
+                <Box 
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'center'
+                    }}>
+                    <Avatar
+                        alt=""
+                        src={leaf}
+                        sx={{
+                            width:"60px",
+                            height:"60px"
+                        }}
+                    />
+                </Box>
+                <Box
+                    sx={{
+                        fontFamily:'Poppins Medium',
+                        fontSize: 20,
+                        textAlign: 'center',
+                    }}
+                >
+                        Our Values
+                </Box>
+                <Box
+                    sx={{
+                        fontSize: font_size,
+                        textAlign: 'justify',
+                    }}
+                >
+                    We put our farmers at the center of what we do.
+                    <br/>We value, challenge and reward excellence in our team. 
+                    <br/>We care for our environment. 
+                    <br/>We drive sustainable financial performance.
+                </Box>
+            </Typography>
+        </Box>
+    );
+}
+
+function Strategy(){
+    return(
+        <Box sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            marginBottom:5
+        }}>
+            <Typography
+            component="div"
+            sx={{ 
+                width:{
+                    lg:500,
+                    md:500,
+                    sm:500,
+                    xs:'100%'
+                }
+            }}>
+                <Box 
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'center'
+                    }}>
+                    <Avatar
+                        alt=""
+                        src={leaf}
+                        sx={{
+                            width:"60px",
+                            height:"60px"
+                        }}
+                    />
+                </Box>
+                <Box
+                    sx={{
+                        fontFamily:'Poppins Medium',
+                        fontSize: 20,
+                        textAlign: 'center',
+                    }}
+                >
+                        Strategy
+                </Box>
+                <Box
+                    sx={{
+                        fontSize: font_size,
+                        textAlign: 'justify',
+                    }}
+                >
+                        With a notable national footprint and local presence where farmers need us, Plant Health Agri Ltd has extensive industry knowledge and expertise across crops and regions. With stockists in strategic farming blocks, we are a call away from the farmer
+                </Box>
+            </Typography>
+        </Box>
+    )
+}
+
+
 function OurBrand(){
     return(
        <Box sx={{
@@ -56,210 +274,17 @@ function OurBrand(){
                    What We Believe In
                </Box>
            </Typography>
-           <Grid container sx={{ marginTop: 0, marginBottom: 10 }}>
-               <Grid item lg={6} md={6} sm={12} xs={12} sx={center_grid_content}>
-                   <Box sx={{
-                       display: 'flex',
-                       justifyContent: 'center',
-                       marginBottom:5
-                   }}> 
-                       <Typography
-                       component="div"
-                       sx={{ 
-                           width:{
-                               lg:500,
-                               md:500,
-                               sm:500,
-                               xs:'100%'
-                           }
-                       }}>
-                           <Box 
-                               sx={{
-                                   display: 'flex',
-                                   justifyContent: 'center'
-                               }}>
-                               <Avatar
-                                   alt=""
-                                   src={leaf}
-                                   sx={{
-                                       width:"60px",
-                                       height:"60px"
-                                   }}
-                               />
-                           </Box>
-                           <Box
-                               sx={{
-                                    fontFamily:'Poppins Medium',
-                                   fontSize: 20,
-                                   textAlign: 'center',
-                               }}>
-                                   Our Company
-                           </Box>
-                           <Box
-                               sx={{
-                                   fontSize: 16,
-                                   textAlign: 'center',
-                               }}
-                           >
-                                   Wholly locally owned with strong African roots, we pride ourselves to be strategically located in Zambia, in the centre of Southern, Eastern and Central Africa. 
-                           </Box>
-                       </Typography>
+           <Grid container spacing={3} sx={{ marginTop: 0, marginBottom: 10 }}>
+                <Grid item lg={6} md={6} sm={12} xs={12} sx={center_grid_content}>
+                   <Box>
+                        <OurVision/>
+                        <OurValues/>
+                        <Strategy/>
                    </Box>
-               </Grid>
-               <Grid item lg={6} md={6} sm={12} xs={12} sx={center_grid_content}>
-                   <Box sx={{
-                           display: 'flex',
-                           justifyContent: 'center',
-                           marginBottom:5
-                       }}>
-                           <Typography
-                           component="div"
-                           sx={{ 
-                                width:{
-                                    lg:500,
-                                    md:500,
-                                    sm:500,
-                                    xs:'100%'
-                                }
-                           }}>
-                               <Box 
-                                   sx={{
-                                       display: 'flex',
-                                       justifyContent: 'center'
-                                   }}>
-                                   <Avatar
-                                       alt=""
-                                       src={leaf}
-                                       sx={{
-                                           width:"60px",
-                                           height:"60px"
-                                       }}
-                                   />
-                               </Box>
-                               <Box
-                                   sx={{
-                                        fontFamily:'Poppins Medium',
-                                        fontSize: 20,
-                                        textAlign: 'center',
-                                   }}
-                               >
-                                       Environment & Sustainability
-                               </Box>
-                               <Box
-                                   sx={{
-                                       fontSize: 16,
-                                       textAlign: 'center',
-                                   }}
-                               >
-                                       Organisations across the board are becoming increasingly focused on achieving and demonstrating sound environmental performance. 
-
-                                        Plant Health Agri Ltd adheres to environmental responsibility of restoring farmland back to the original healthy condition, to eliminate pollution, renovate environment, back to nature and ensure human&apos;s health.
-                               </Box>
-                           </Typography>
-                       </Box>
-               
-                   </Grid>
-                   <Grid item lg={6} md={6} sm={12} xs={12} sx={center_grid_content}>
-                       <Box sx={{
-                           display: 'flex',
-                           justifyContent: 'center',
-                           marginBottom:5
-                       }}>
-                           <Typography
-                           component="div"
-                           sx={{ 
-                                width:{
-                                    lg:500,
-                                    md:500,
-                                    sm:500,
-                                    xs:'100%'
-                                }
-                           }}>
-                               <Box 
-                                   sx={{
-                                       display: 'flex',
-                                       justifyContent: 'center'
-                                   }}>
-                                   <Avatar
-                                       alt=""
-                                       src={leaf}
-                                       sx={{
-                                           width:"60px",
-                                           height:"60px"
-                                       }}
-                                   />
-                               </Box>
-                               <Box
-                                   sx={{
-                                        fontFamily:'Poppins Medium',
-                                        fontSize: 20,
-                                        textAlign: 'center',
-                                   }}
-                               >
-                                       Safety
-                               </Box>
-                               <Box
-                                   sx={{
-                                       fontSize: 16,
-                                       textAlign: 'center',
-                                   }}
-                               >
-                                      Whenever pesticides are transported, stored, mixed, loaded or applied, several things need to be kept in mind. Keep unauthorized people away, especially children, when handling pesticides. Be safety conscious, and always read pesticide labels.
-                               </Box>
-                           </Typography>
-                       </Box>
-                   </Grid>
-                   <Grid item lg={6} md={6} sm={12} xs={12} sx={center_grid_content}>
-                           <Box sx={{
-                               display: 'flex',
-                               justifyContent: 'center',
-                               marginBottom:5
-                           }}>
-                               <Typography
-                               component="div"
-                               sx={{ 
-                                    width:{
-                                        lg:500,
-                                        md:500,
-                                        sm:500,
-                                        xs:'100%'
-                                    }
-                               }}>
-                                   <Box 
-                                       sx={{
-                                           display: 'flex',
-                                           justifyContent: 'center'
-                                       }}>
-                                       <Avatar
-                                           alt=""
-                                           src={leaf}
-                                           sx={{
-                                               width:"60px",
-                                               height:"60px"
-                                           }}
-                                       />
-                                   </Box>
-                                   <Box
-                                       sx={{
-                                            fontFamily:'Poppins Medium',
-                                            fontSize: 20,
-                                            textAlign: 'center',
-                                       }}
-                                   >
-                                           Strategy
-                                   </Box>
-                                   <Box
-                                       sx={{
-                                           fontSize: 16,
-                                           textAlign: 'center',
-                                       }}
-                                   >
-                                           With a notable national footprint and local presence where farmers need us, Plant Health Agri Ltd has extensive industry knowledge and expertise across crops and regions. With outlets in strategic farming block we are a call away from the farmer
-                                   </Box>
-                               </Typography>
-                           </Box>
-
-                       </Grid>
+                </Grid>
+                <Grid item lg={6} md={6} sm={12} xs={12} sx={center_grid_content}>
+                    <EnvironmentAndSus/>
+                </Grid>
            </Grid>
        </Box>
        </Box>

@@ -9,18 +9,18 @@ const herbicides_list = [
     //     product:"ACAMOS",
     //     active_ingridient: "Metobromuron 600g/lt"
     // },
-    // {
-    //     product:"AMETRYN 50% SC ",
-    //     active_ingridient: "Ametryn 50% SC"
-    // },
+    {
+        product:"AMETRYN 50% SC ",
+        active_ingridient: "Ametryn 50% SC"
+    },
     {
         product:"BASAGRAN 480 SL ",
         active_ingridient: "Bentazon 480g/lt"
     },
-    {
-        product:"BOTIGA OD",
-        active_ingridient: "Pyridate 300g/lt + Mesotrione 90g/lt "
-    },
+    // {
+    //     product:"BOTIGA OD",
+    //     active_ingridient: "Pyridate 300g/lt + Mesotrione 90g/lt "
+    // },
     {
         product:"BROADSTRICK",
         active_ingridient: " flumetsulam 800g/kg"
@@ -61,10 +61,10 @@ const herbicides_list = [
         product:"INTEGRITY",
         active_ingridient: "Kixor 68g/lt + dimethanamid 600g/lt"
     },
-    {
-        product:"LANTAGRAN 450 WP",
-        active_ingridient: "Pyridate 450g/lt"
-    },
+    // {
+    //     product:"LANTAGRAN 450 WP",
+    //     active_ingridient: "Pyridate 450g/lt"
+    // },
     {
         product:"LOMA LINDA",
         active_ingridient: "Chlorimuron - ethyl 107g/lt : Metribuzine 643g/lt"

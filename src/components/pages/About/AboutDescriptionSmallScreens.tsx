@@ -8,8 +8,10 @@ import {
  } from '@mui/material'
 
  import Avatar from '@mui/material/Avatar';
- const farmer = '/images/test-min.png'
- const steward = '/images/steward.png'
+ import SectionDescription from './SectionDescription'
+
+ const farmer = '/images/steward_image.png'
+ const sure_start_image = '/images/sure_start_image.jpeg'
 
 function AboutDescriptionSmallScreens(){
     return(
@@ -24,33 +26,12 @@ function AboutDescriptionSmallScreens(){
                 xs:'block'
             }
         }}>
-           <Box sx={{
-                           
-                   backgroundColor: 'white',
-                   marginBottom: 3,
-                   
-               }}>
-                   <Typography component="div">
-                       <Box
-                           sx={{
-                               fontSize: 24,
-                               textAlign: 'center',
-                               color:'#DD9933',
-                               fontFamily:'Poppins Bold',
-                           }}>
-                           OUR BRAND
-                       </Box>
-                       <Box
-                           sx={{
-                               fontSize: 20,
-                               textAlign: 'center',
-                               color:'black',
-                               marginBottom: 1,
-                               fontFamily:'Poppins Medium',
-                           }}>
-                           Who we are and What we do
-                       </Box>
-               </Typography>
+           <Box 
+            sx={{
+                backgroundColor: 'white',
+                marginBottom: 3,
+            }}>
+                <SectionDescription/>
                <Grid container sx={{marginBottom:5}}>
                    <Grid item xs={12}>
                        <Box
@@ -72,7 +53,7 @@ function AboutDescriptionSmallScreens(){
                                        fontWeight:200,
                                        fontSize: 20,
                                        textAlign: 'start',
-                                       color:'black',
+                                       color:'#DD9933',
                                        marginBottom: 1,
                                        fontFamily:'Poppins Medium',
                                    }}>
@@ -80,15 +61,15 @@ function AboutDescriptionSmallScreens(){
                                </Box>
                                
                                <Box
-                                   sx={{
-                                       fontWeight: 500,
-                                       fontSize: 16,
-                                       textAlign: 'start',
-                                       fontFamily:'Poppins Regular',
-                                   }}>
-                                   We continually seeking cost-effective crop protection solution to help the farmer to produce high quality and high yielding crops. 
-                                   
-                               </Box>
+                                    sx={{
+                                        fontWeight: 500,
+                                        fontSize: 16,
+                                        padding:0,
+                                        textAlign: 'justify',
+                                    }}>
+                                    Our portfolio is unique as we endeavor to source from the best suppliers. These includes multination like BASF and Corteva. We are the sole distributor of the Tradecorp, the experts in micronutrients and speciality fertilisers. We source our nanotechnology environmentally friendly pesticides from South America. We have a complete range of pesticides including herbicides, insecticides and fungicides. We also have adjuvants and fertilisers. We have more than 50 registered pesticides.  We supply sweet beans seeds to our small holder farmers and provide a readily available market for their produce.
+                                    
+                                </Box>
                            </Typography>
                            {/* <button
                            className='contact-button' 
@@ -123,7 +104,7 @@ function AboutDescriptionSmallScreens(){
                                         },
                                     }} 
                                    alt="Steward Image" 
-                                   src={farmer} />
+                                   src={sure_start_image} />
                            </Box>
                    </Grid>
                </Grid>  
@@ -196,7 +177,7 @@ function AboutDescriptionSmallScreens(){
                                         },
                                    }} 
                                    alt="Steward Image" 
-                                   src={steward} />
+                                   src={farmer} />
                            </Box>
                    </Grid>
                </Grid>  

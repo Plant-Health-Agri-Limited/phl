@@ -23,7 +23,7 @@ const tact = '/images/field_tractor.png'
                 }}>
                     <Typography
                     component="div" 
-                    sx={{ paddingTop: 15}}>
+                    sx={{ paddingTop: 17}}>
                         {/* <Box 
                             sx={{
                                 width:'100%',
@@ -42,14 +42,6 @@ const tact = '/images/field_tractor.png'
                             textAlign: 'center',
                         }}>
                             Products
-                        </Box>
-                        <Box sx={{
-                            color: 'white',
-                            fontWeight:'bold',
-                            fontSize: 20,
-                            textAlign: 'center',
-                        }}>
-                            Plant Health Agri Limited
                         </Box>
                     </Typography>
             </Box>

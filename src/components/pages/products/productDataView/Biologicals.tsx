@@ -1,27 +1,52 @@
-import { Grid, Box } from "@mui/material";
-import { productListContainer } from "../../../../../styles/customcss";
-import CardDisplay from "../CardDisplay";
-const container = '/images/w_container.png'
+import { Box, TableContainer, Table, TableHead, TableCell, TableBody, TableRow } from "@mui/material";
+import biologicals_list from "../../../../constants/biologicals_list";
 
-export default function Biologicals(){
+const bg2= "#F9F9F9"
+
+export default function Fungicide(){
     return(
-        <Grid container >
-            <Grid item xs={12} sm={6} md={4}>
-                <Box sx={{ ...productListContainer }}>
-                    <CardDisplay productimage={container} productname=""/>
-                </Box>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-                <Box sx={{ ...productListContainer }}>
-                    <CardDisplay productimage={container} productname=""/>
-                </Box>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-                <Box sx={{ ...productListContainer }}>
-                    <CardDisplay productimage={container} productname=""/>
-                </Box>
-            </Grid>
-            
-        </Grid>
-    )
+        <Box
+        sx={{
+            // border:'1px solid #e8e8e8',
+            borderRadius:5,
+            padding:3,
+            backgroundColor:bg2
+        }}>
+            <TableContainer sx={{ marginBottom: 2 }}>
+                <Table size="small">
+                    <TableHead>
+                        <TableRow>
+                            <TableCell component="td" scope="row">
+                            </TableCell>
+                            <TableCell component="td" scope="row">
+                                Products
+                            </TableCell>
+                            <TableCell component="td" scope="row">
+                                Active Ingridient
+                            </TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                    {
+                        biologicals_list.map((data, index)=>{
+                            return(
+                                <TableRow key={index}>
+                                    <TableCell component="td" scope="row">
+                                        {index + 1}
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        {data.product}
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        {data.active_ingridient}
+                                    </TableCell>
+                                </TableRow>
+                            );
+                        })
+                    }
+                    </TableBody>
+                </Table>
+            </TableContainer>
+        </Box>
+    );
 }

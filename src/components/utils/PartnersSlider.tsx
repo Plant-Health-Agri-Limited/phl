@@ -27,7 +27,8 @@ const settings = {
     slidesToScroll: 1,
     nextArrow: <NextArrow/>,
     prevArrow: <PrevArrow/>,
-    arrows:true
+    arrows:true,
+    autoplay:true
   };
 
 export default function PartnersSlider()  {

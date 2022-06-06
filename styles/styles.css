@@ -2,6 +2,7 @@
   --background-mage-1: url('/images/spraying_tractor.png');
   --background-mage-2: url('/images/women_farming.png');
   --footer-image: url('/images/footer-background.png');
+  --link-color: rgb(0, 136, 0);
 }
 
 
@@ -30,6 +31,28 @@
 @font-face {
   font-family: "Poppins Medium";
   src: url("/fonts/Poppins-Medium.ttf");
+}
+
+/* Links */
+/* unvisited link */
+.custom-link:link {
+  color: var(--link-color);
+}
+
+/* visited link */
+.custom-link:visited {
+  color: var(--link-color);
+}
+
+/* mouse over link */
+.custom-link:hover {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+  color: blue;
 }
 
 

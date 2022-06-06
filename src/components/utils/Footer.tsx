@@ -33,7 +33,8 @@ export default function Footer(){
                             sx={{
                                 fontSize:14,
                                 marginBottom:1.5,
-                                textTransform:'uppercase'
+                                textTransform:'uppercase',
+                                fontFamily:"Poppins Bold"
                             }}>
                                Contact Us
                             </Box>
@@ -94,7 +95,8 @@ export default function Footer(){
                            sx={{
                                 fontSize:14,
                                 marginBottom:1,
-                                textTransform:'uppercase'
+                                textTransform:'uppercase',
+                                fontFamily:"Poppins Bold"
                            }}>
                                Our Partners
                            </Box>
@@ -146,7 +148,8 @@ export default function Footer(){
                            sx={{
                                 fontSize:14,
                                 marginBottom:1,
-                                textTransform:'uppercase'
+                                textTransform:'uppercase',
+                                fontFamily:"Poppins Bold"
                            }}>
                                The Company
                            </Box>
@@ -198,8 +201,12 @@ export default function Footer(){
                         />
                     </Grid>
                     <Grid item xs={12}  sx={grid_style} >
-                       <Typography component="div">
-                            @2022 planthealthagri.com
+                       <Typography 
+                       component="div"
+                       sx={{
+                           fontSize:14
+                       }}>
+                            @2018 planthealthagri.com
                        </Typography>
                     </Grid>
                 </Grid>

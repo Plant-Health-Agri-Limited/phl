@@ -61,7 +61,7 @@ export default function ProductView(){
     useEffect(()=>{
         switch(index){
             case 1:
-                setCategoryName("Liquid Fertilize")
+                setCategoryName("Liquid Fertilizers")
                 break;
             case 2:
                 setCategoryName("Herbicide Elite")
@@ -93,7 +93,7 @@ export default function ProductView(){
 
         if(parseInt(String(router.query.productId)) === 1){
             setButtonActive([true,false,false,false,false,false,false,false])
-            setCategoryName("Liquid Fertilize")
+            setCategoryName("Liquid Fertilizers")
             setIndex(1);
         }
 

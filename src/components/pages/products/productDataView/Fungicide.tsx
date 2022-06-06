@@ -16,34 +16,34 @@ export default function Fungicide(){
                 <Table size="small">
                     <TableHead>
                         <TableRow>
-                            <TableCell component="th" scope="row">
+                            <TableCell component="td" scope="row">
                             </TableCell>
-                            <TableCell component="th" scope="row">
+                            <TableCell component="td" scope="row">
                                 Products
                             </TableCell>
-                            <TableCell component="th" scope="row">
+                            <TableCell component="td" scope="row">
                                 Active Ingridient
                             </TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {
-                            fungicides_list.map((data, index)=>{
-                                return(
-                                    <TableRow key={index}>
-                                        <TableCell component="th" scope="row">
-                                            {index + 1}
-                                        </TableCell>
-                                        <TableCell component="th" scope="row">
-                                            {data.product}
-                                        </TableCell>
-                                        <TableCell component="th" scope="row">
-                                            {data.active_ingridient}
-                                        </TableCell>
-                                    </TableRow>
-                                );
-                            })
-                        }
+                    {
+                        fungicides_list.map((data, index)=>{
+                            return(
+                                <TableRow key={index}>
+                                    <TableCell component="td" scope="row">
+                                        {index + 1}
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        {data.product}
+                                    </TableCell>
+                                    <TableCell component="td" scope="row">
+                                        {data.active_ingridient}
+                                    </TableCell>
+                                </TableRow>
+                            );
+                        })
+                    }
                     </TableBody>
                 </Table>
             </TableContainer>

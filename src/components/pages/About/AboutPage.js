@@ -38,7 +38,7 @@ import {
             }}>
                 <Typography
                 component="div" 
-                sx={{ paddingTop: 15}}>
+                sx={{ paddingTop: 17}}>
                     {/* <Box 
                         sx={{
                             width:'100%',
@@ -59,14 +59,14 @@ import {
                     }}>
                         About us
                     </Box>
-                    <Box sx={{
+                    {/* <Box sx={{
                         color: 'white',
                         fontSize: 18,
                         textAlign: 'center',
                         fontFamily:'Poppins Regular',
                     }}>
                         Plant Health Agri Limited
-                    </Box>
+                    </Box> */}
                 </Typography>
             </Box>
             <AboutDescription/>

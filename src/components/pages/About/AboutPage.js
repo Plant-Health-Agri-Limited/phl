@@ -13,7 +13,7 @@ import {
  import Footer from '../../utils/Footer'
  import Navbar from '../../navs/Navbar'
 
- const field = '/images/lady_field.png'
+ const field = '/images/women_farming_garden.png'
 
  export default function AboutPage(){
      return(
@@ -28,6 +28,12 @@ import {
                 backgroundImage: `url(${field})`,
                 backgroundRepeat:'no-repeat',  
                 backgroundSize: 'cover',
+                backgroundPosition:{
+                    lg:'0 0',
+                    md:'0 0',
+                    sm:'0 0',
+                    xs:'-240px 0px'
+                },
                 textAlign: 'center'
             }}>
                 <Typography

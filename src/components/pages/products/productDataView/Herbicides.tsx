@@ -15,7 +15,7 @@ export default function Herbicides(){
                 <TableContainer sx={{ marginBottom: 2 }}>
                     <Table size="small">
                         <TableHead>
-                            <TableRow>
+                            <TableRow hover>
                                 <TableCell component="td" scope="row">
                                 </TableCell>
                                 <TableCell component="td" scope="row">
@@ -30,7 +30,7 @@ export default function Herbicides(){
                             {
                                 herbicides_list.map((data, index)=>{
                                     return(
-                                        <TableRow key={index}>
+                                        <TableRow key={index} hover>
                                             <TableCell component="td" scope="row">
                                                 {index + 1}
                                             </TableCell>

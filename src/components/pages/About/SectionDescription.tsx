@@ -22,10 +22,10 @@ export default function SectionDescription(){
             component="div"
             sx={{
                 padding:{
-                    lg:1,
-                    md:1,
-                    sm:1,
-                    xs:0
+                    lg:0,
+                    md:0,
+                    sm:0,
+                    xs:1
                 },
                 marginBottom:{
                     lg:10,
@@ -38,12 +38,12 @@ export default function SectionDescription(){
             sx={{
                 textAlign:'center',
                 fontSize: {
-                    lg:24,
+                    lg:28,
                     md:24,
                     sm:24,
                     xs:20
                 },
-                fontFamily:'Poppins Medium',
+                fontFamily:'Poppins Bold',
                 color:'#DD9933',
                 marginBottom:1
             }}>
@@ -54,6 +54,7 @@ export default function SectionDescription(){
                 fontSize: 16,
                 fontFamily:'Poppins Regular',
                 color:'back',
+                width:'100%',
                 textAlign: 'justify',
             }}>
                 Plant Health Agri Limited (PHAL) is a wholly owned Zambian company focusing on agriculture. PHAL services both the small holder and commercial famers.  We service a substantial share market of the sector with innovative solutions and quality <ToProductsLink/>. <br/><br/>Our <ToProductsLink/> help grow the nation&rsquo;s food, improve soil health and contribute to more sustainable agriculture practice. We help farmers take care of their environment. 

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.6.2",
@@ -16,7 +17,6 @@
     "@types/react-slick": "^0.23.8",
     "@types/styled-components": "^5.1.25",
     "axios": "^0.27.2",
-    "bulma": "^0.9.4",
     "classnames": "^2.3.1",
     "formik": "^2.2.9",
     "next": "12.1.6",

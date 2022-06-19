@@ -12,11 +12,6 @@ import {
 
  const leaf ='/images/leaf.png'
 
-const center_grid_content={
-    display:'flex',
-    justifyContent:'center',
-}
-
 const font_size='16px'
 
 function OurVision(){
@@ -26,16 +21,7 @@ function OurVision(){
             justifyContent: 'center',
             marginBottom:5
         }}> 
-            <Typography
-            component="div"
-            sx={{ 
-                width:{
-                    lg:500,
-                    md:500,
-                    sm:500,
-                    xs:'100%'
-                }
-            }}>
+            <CustomTypography>
                 <Box 
                     sx={{
                         display: 'flex',
@@ -65,7 +51,7 @@ function OurVision(){
                     }}>
                      To become a leading supplier of crop protection products in the region and help farmers to utilize and maximise resource efficiency, eliminate or minimize product hazards to create durable solutions for farmers.
                 </Box>
-            </Typography>
+            </CustomTypography>
         </Box>
     )
 }
@@ -78,16 +64,7 @@ function EnvironmentAndSus(){
             justifyContent: 'center',
             marginBottom:5
         }}>
-            <Typography
-            component="div"
-            sx={{ 
-                 width:{
-                     lg:500,
-                     md:500,
-                     sm:500,
-                     xs:'100%'
-                 }
-            }}>
+            <CustomTypography>
                 <Box 
                     sx={{
                         display: 'flex',
@@ -119,7 +96,7 @@ function EnvironmentAndSus(){
                 >
                      We work with small holder and commercial farmers to conserve the environment and protect lives. We focus on strengthening and feeding the crops, making the crops able to defend and fight for themselves. <br/><br/>With our nanotechnology, farmers are applying 35% to 50% less pesticides to their farm land. With our suspension technology, farmers are applying less quantities of fertilisers per hectar but achieving even better results.<br/><br/>  We train small holder farmers in Good Agriculture Practices (GAP), safe use of pesticides and other sustainable farming methods like intergrated paste management and organic farming.
                 </Box>
-            </Typography>
+            </CustomTypography>
         </Box>
     )
 }
@@ -131,16 +108,7 @@ function OurValues(){
             justifyContent: 'center',
             marginBottom:5
         }}>
-            <Typography
-            component="div"
-            sx={{ 
-                width:{
-                    lg:500,
-                    md:500,
-                    sm:500,
-                    xs:'100%'
-                }
-            }}>
+            <CustomTypography>
                 <Box 
                     sx={{
                         display: 'flex',
@@ -175,7 +143,7 @@ function OurValues(){
                     <br/>We care for our environment. 
                     <br/>We drive sustainable financial performance.
                 </Box>
-            </Typography>
+            </CustomTypography>
         </Box>
     );
 }
@@ -187,16 +155,7 @@ function Strategy(){
             justifyContent: 'center',
             marginBottom:5
         }}>
-            <Typography
-            component="div"
-            sx={{ 
-                width:{
-                    lg:500,
-                    md:500,
-                    sm:500,
-                    xs:'100%'
-                }
-            }}>
+            <CustomTypography>
                 <Box 
                     sx={{
                         display: 'flex',
@@ -224,11 +183,10 @@ function Strategy(){
                     sx={{
                         fontSize: font_size,
                         textAlign: 'justify',
-                    }}
-                >
+                    }}>
                         With a notable national footprint and local presence where farmers need us, Plant Health Agri Ltd has extensive industry knowledge and expertise across crops and regions. With stockists in strategic farming blocks, we are a call away from the farmer
                 </Box>
-            </Typography>
+            </CustomTypography>
         </Box>
     )
 }
@@ -275,19 +233,54 @@ function OurBrand(){
                </Box>
            </Typography>
            <Grid container spacing={3} sx={{ marginTop: 0, marginBottom: 10 }}>
-                <Grid item lg={6} md={6} sm={12} xs={12} sx={center_grid_content}>
-                   <Box>
-                        <OurVision/>
-                        <OurValues/>
-                        <Strategy/>
-                   </Box>
-                </Grid>
-                <Grid item lg={6} md={6} sm={12} xs={12} sx={center_grid_content}>
+                <CustomGrid>
+                    <OurVision/>
+                </CustomGrid>
+                <CustomGrid>
+                    <OurValues/>
+                </CustomGrid>
+                <CustomGrid>
                     <EnvironmentAndSus/>
-                </Grid>
+                </CustomGrid>
+                <CustomGrid>
+                    <Strategy/>
+                </CustomGrid>
+                
            </Grid>
        </Box>
        </Box>
+    );
+}
+
+const CustomGrid = ({children}:any)=>{
+    return(
+        <Grid item lg={6} md={6} sm={6} xs={12} >
+            <Box
+            sx={{
+                width:'100%',
+                paddingLeft:1,
+                paddingRight:1
+            }}>
+                {children}
+            </Box>
+        </Grid>
+    );
+}
+
+const CustomTypography = ({children}:any)=>{
+    return(
+        <Typography
+            component="div"
+            sx={{ 
+                width:{
+                    lg:500,
+                    md:500,
+                    sm:500,
+                    xs:'100%'
+                }
+            }}>
+            {children}
+        </Typography>
     );
 }
 

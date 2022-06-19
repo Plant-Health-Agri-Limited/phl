@@ -4,7 +4,8 @@ import {
     Box, 
     Grid, 
     Typography, 
-    Container
+    Container,
+    TextField
  } from '@mui/material'
 
 import Footer from '../../utils/Footer'
@@ -15,6 +16,7 @@ import { useFormik } from 'formik';
 import { SpinnerDotted } from 'spinners-react';
 import { testGetData } from '../../../services/methods';
 import Fade from '@mui/material/Fade';
+import emailjs from '@emailjs/browser';
 
 interface Errors {
     email: string,
@@ -27,15 +29,20 @@ const sleep = (ms:number) => new Promise((r) => setTimeout(r, ms));
 export function SingleErrorMessage(props:any){
     return(
         (props.errormessage)?
-        <Box sx={{ color: 'red', textAlign:'center', fontSize:14, marginBottom:2 }}>
+        <Typography component="div" sx={{ color: 'red', textAlign:'center', fontSize:14, marginBottom:2 }}>
             {props.errormessage}
-        </Box>
+        </Typography>
         :<></>
     )
 }
 
 export default function EmailForm(){
     const [sent, setSent] = useState(false)
+    const [sendFailed, setSendFailed] = useState(false)
+    const [playSendAniamtion, setPlaySendAnimation] = useState(false)
+    
+    const form = React.useRef<any>()!
+
     const formik = useFormik({
         validateOnChange:false,
         validateOnBlur:false,
@@ -67,11 +74,23 @@ export default function EmailForm(){
         },
 
         onSubmit: async (values) => {
-            const test = await sleep(5000)
-            setSent(true)
-            setTimeout(function(){
-                setSent(false)
-            }, 3000)
+            setPlaySendAnimation(true)
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+            .then((result) => {
+                setPlaySendAnimation(false)
+                setSent(true)
+                setTimeout(function(){
+                    setSent(false)
+                }, 3000)
+            }, (error) => {
+                setPlaySendAnimation(false)
+                setSendFailed(true)
+                setTimeout(function(){
+                    setSendFailed(false)
+                }, 3000)
+            });
+
+            formik.resetForm();
         },
     });
 
@@ -111,14 +130,15 @@ export default function EmailForm(){
                 }
             }}>
                 {
-                    (formik.isSubmitting)?
+                    (playSendAniamtion)?
                     <Box
                     sx={{
                         position:'absolute',
                         width:'100%',
-                        top:'35%',
                         display:'flex',
                         justifyContent:'center',
+                        alignItems:'center',
+                        height:'100%',
                         zIndex:5
                     }}>
                         <SpinnerDotted size={50} thickness={150} speed={100} color="#ffa566" />
@@ -130,9 +150,10 @@ export default function EmailForm(){
                     sx={{
                         position:'absolute',
                         width:'100%',
-                        top:'35%',
                         display:'flex',
                         justifyContent:'center',
+                        alignItems:'center',
+                        height:'100%',
                         zIndex:5
                     }}>
                         <Typography
@@ -142,26 +163,27 @@ export default function EmailForm(){
                             backgroundColor:'#ffa566',
                             borderRadius:2,
                             fontSize:14,
-                            paddingLeft:1,
-                            paddingRight:1,
-                            paddingTop:1.5,
                             boxShadow:'0px 1px 10px -3px rgba(0,0,0,0.2)',
                             color:'white',
-                            height:50
+                            display:'flex',
+                            alignItems:'center',
+                            height:50,
+                            padding:1
                         }}>
                             Email sent successfully!
                         </Typography>
                     </Box>
                 </Fade>
                 {
-                    (false)?
+                    (sendFailed)?
                     <Box
                     sx={{
                         position:'absolute',
                         width:'100%',
-                        top:'35%',
                         display:'flex',
                         justifyContent:'center',
+                        alignItems:'center',
+                        height:'100%',
                         zIndex:5
                     }}>
                         <Typography
@@ -171,65 +193,62 @@ export default function EmailForm(){
                             backgroundColor:'#ffedef',
                             borderRadius:2,
                             fontSize:14,
-                            paddingLeft:1,
-                            paddingRight:1,
                             boxShadow:'0px 1px 10px -3px rgba(0,0,0,0.2)',
                             color:'red',
-                            paddingTop:1.5,
-                            height:50
+                            display:'flex',
+                            alignItems:'center',
+                            height:50,
+                            padding:1
                         }}>
                             Email not sent, try again!
                         </Typography>
                     </Box>
                     :<></>
                 }
-                <form onSubmit={formik.handleSubmit}>
+                <form ref={form} onSubmit={formik.handleSubmit}>
                     <Box sx={{width:'100%', marginBottom:1}}>
-                        
-                        <label className="label-form">Email</label>
-                        <input  
-                            className="input" 
+                        <TextField
+                            fullWidth
+                            size="small"
+                            label="Your Email"
                             type="email" 
-                            placeholder="Enter valid e-mail"
                             name="email" 
                             onChange={formik.handleChange}
-                            value={formik.values.email}/>
+                            value={formik.values.email}
+                        />
                         <SingleErrorMessage errormessage={formik.errors.email}/>
                     </Box>
                     <Box sx={{width:'100%', marginBottom:1}}>
-                        <label className="label-form">Subject</label>
-                        <input
-                            className="input" 
+                        <TextField
+                            fullWidth
+                            size="small"
+                            label="Subject"
                             type="text" 
                             placeholder="Enter subject" 
                             name="subject"
                             onChange={formik.handleChange}
-                            value={formik.values.subject}/>
-                            <SingleErrorMessage errormessage={formik.errors.subject}/>
+                            value={formik.values.subject}
+                        />
+                        <SingleErrorMessage errormessage={formik.errors.subject}/>
                     </Box>
                     <Box sx={{width:'100%', marginBottom:1}}>
-                        <label className="label-form">Message</label>
-                        <textarea 
-                            className="input" 
-                            style={{ 
-                                    borderRadius: 5, 
-                                    width: '100%', 
-                                    height:200,
-                                    // backgroundColor: 'rgba(220, 220, 220, 0.4)' 
-                                }}  
+                        <TextField   
+                            fullWidth
+                            size="small"
+                            label="Message"
                             name="message"
                             placeholder="Enter your message"
+                            multiline
+                            rows={8}
                             onChange={formik.handleChange}
-                            value={formik.values.message}>
-                        </textarea>
+                            value={formik.values.message}
+                        />
                         <SingleErrorMessage errormessage={formik.errors.message}/>
                     </Box>
                     <Box
                     sx={{ 
                         width:'100%',
                         border:'0px solid red',
-                        display:'flex',
-                        justifyContent:'flex-start'
                     }}>
                         <SendButton type="submit" startIcon={<SendIcon />}>
                             SEND EMAIL

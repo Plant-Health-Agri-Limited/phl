@@ -39,17 +39,6 @@ import {
                 <Typography
                 component="div" 
                 sx={{ paddingTop: 17}}>
-                    {/* <Box 
-                        sx={{
-                            width:'100%',
-                            color: 'white',
-                            fontFamily:'Poppins Medium',
-                            fontSize:20,
-                            textAlign: 'center',
-                            // borderBottom:'5px solid white'
-                        }}>
-                        PHL
-                    </Box> */}
                     <Box sx={{
                         color: 'white',
                         fontWeight:'bold',
@@ -59,14 +48,6 @@ import {
                     }}>
                         About us
                     </Box>
-                    {/* <Box sx={{
-                        color: 'white',
-                        fontSize: 18,
-                        textAlign: 'center',
-                        fontFamily:'Poppins Regular',
-                    }}>
-                        Plant Health Agri Limited
-                    </Box> */}
                 </Typography>
             </Box>
             <AboutDescription/>

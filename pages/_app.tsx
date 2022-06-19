@@ -1,7 +1,6 @@
 import React from 'react'
 
 // css links
-import 'bulma/css/bulma.min.css'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import '../styles/styles.css'
@@ -16,6 +15,21 @@ const theme = createTheme({
   typography: {
     fontFamily: ["Poppins Regular","Helvetica", "Arial", "sans-serif"].join(","),
   },
+  components:{
+    MuiTableRow:{
+      styleOverrides: {
+        // Name of the slot
+        root: {
+          // Some CSS
+          // backgroundColor:'red'
+          '&.MuiTableRow-hover:hover': {
+            cursor:'pointer',
+            backgroundColor: '#ffdbbd',
+          },
+        },
+      },
+    }
+  }
 });
 
 

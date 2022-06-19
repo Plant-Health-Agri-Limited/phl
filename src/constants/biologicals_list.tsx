@@ -2,23 +2,23 @@
 const biologicals_list = [
     {
         product: "Histic",
-        active_ingridient: (<p>bradyrhizobium japonicum 4x10<sup>9</sup></p>)
+        active_ingridient: (<>bradyrhizobium japonicum 4x10<sup>9</sup></>)
     },
     {
         product: "Rhizoflo",
-        active_ingridient: (<p>bradyrhizobium japonicum 4x10<sup>9</sup></p>)
+        active_ingridient: (<>bradyrhizobium japonicum 4x10<sup>9</sup></>)
     },
     {
         product: "Nitrobiot",
-        active_ingridient: (<p>bradyrhizobium japonicum 4x10<sup>10</sup></p>)
+        active_ingridient: (<>bradyrhizobium japonicum 4x10<sup>10</sup></>)
     },
     {
         product: "Liquid on line Peanut ",
-        active_ingridient: (<p>genus Bradyrhizobium spp </p>)
+        active_ingridient: (<>genus Bradyrhizobium spp </>)
     },
     {
         product: "Rhizoflo Premium Wheat",
-        active_ingridient: (<p>Azospirillum brasilensep,  Pseudomonas fluorescens</p>)
+        active_ingridient: (<>Azospirillum brasilensep,  Pseudomonas fluorescens</>)
     },
 ]
 

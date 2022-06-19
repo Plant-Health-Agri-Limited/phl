@@ -61,20 +61,7 @@ export default function HomeSlider()  {
                                     xs: 10
                                 }
                             }}>
-                                <Box sx={{
-                                    width:'100%'
-                                }}>
-                                    {/* <Box sx={{
-                                            width:'100%',
-                                            color: 'white',
-                                            fontFamily:'Poppins Medium',
-                                            fontSize:20,
-                                            textAlign: 'center',
-                                            // borderBottom:'5px solid white'
-                                        }}>
-                                        PHL
-                                    </Box> */}
-                                </Box>
+                               
                                 <Box sx={{
                                         width:'100%',
                                         color: 'white',

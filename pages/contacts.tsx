@@ -1,10 +1,17 @@
 import React from 'react';
 import type { NextPage } from 'next'
 import ContactPage from '../src/components/pages/contacts/ContactPage';
-
+import Head from 'next/head';
 const Contacts: NextPage = () => {
   return (
-      <ContactPage/>
+    <main>
+    <Head>
+      <title>PHL | Contacts</title>
+      <meta name="description" content="Get in touch, we would love to hear from you."/>
+      <meta name="robots" content="index, follow" />
+    </Head>
+    <ContactPage/>
+  </main>
   )
 }
 

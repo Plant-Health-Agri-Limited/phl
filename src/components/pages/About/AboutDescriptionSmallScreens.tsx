@@ -12,7 +12,7 @@ import SectionDescription from './SectionDescription'
 import { useRouter } from 'next/router'
 import routes from '../../../constants/routes'
 
-const farmer = '/images/steward_image.png'
+const farmer = '/images/steward_image.jpg'
 const sure_start_image = '/images/sure_start_image.jpeg'
 
 const WideRangeProductSection = () =>{

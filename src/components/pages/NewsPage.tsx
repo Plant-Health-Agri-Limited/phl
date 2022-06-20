@@ -13,7 +13,7 @@ import {
  import NewsItem from '../utils/NewsItem'
  import PartnersSlider from '../utils/PartnersSlider';
  import Navbar from '../navs/Navbar';
- const news_image = '/images/us-min.png'
+ const news_image = '/images/us_min.jpg'
  
  function NewsItems(){
      return(
@@ -68,20 +68,7 @@ import {
                 backgroundSize: 'cover'
                 }}>
                 <Typography component="div" sx={{ paddingTop: 15}}>
-                    {/* <Box sx={{
-                            width:'100%'
-                        }}>
-                        <Box sx={{
-                                width:'100%',
-                                color: 'white',
-                                fontFamily:'Poppins Medium',
-                                fontSize:20,
-                                textAlign: 'center',
-                                // borderBottom:'5px solid white'
-                            }}>
-                            PHL
-                        </Box>
-                    </Box> */}
+                    
                     <Box sx={{
                         color: 'white',
                         fontFamily:'Poppins Bold',

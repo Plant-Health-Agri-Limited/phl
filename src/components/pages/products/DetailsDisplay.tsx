@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { 
     Box, 
+    IconButton, 
     Typography, 
  } from '@mui/material'
-
+ import CloseIcon from '@mui/icons-material/Close';
  import Table from '@mui/material/Table';
  import TableBody from '@mui/material/TableBody';
  import TableCell from '@mui/material/TableCell';
@@ -14,8 +15,6 @@ import {
 export default function DetailsDisplay(props:any){
     return(
         <Box sx={{ 
-                paddingLeft: 5,
-                paddingRight: 5,
                 borderRadius: 2,
                 position: 'fixed', 
                 display:'flex', 
@@ -24,34 +23,36 @@ export default function DetailsDisplay(props:any){
                 left:'0%', 
                 width: '100vw', 
                 height: '100vh',
-                backgroundColor: 'rgba(28, 28, 28, 0.5)',
                 boxShadow: '0 4px 20px 5px rgba(0, 0, 0, 0.2)',
                 zIndex: 100,
+                overflowY:'scroll',
                 fontSize:16
             }}>
                 <Box sx={{
-                        paddingLeft: 5, 
+                        position: 'absolute', 
+                        width: '70%', 
+                        height: '100vh',
+                        paddingLeft:3,
+                        paddingRight:3,
+                        overflowY:'scroll',
                         backgroundColor: '#F4F4F4', 
-                        width: 700, 
-                        paddingRight: 5,
                     }}>
-                    <Box sx={{ width: '100%', display:'flex', justifyContent: 'end'}}>
-                        <button
-                            type="button" 
+                    <Box 
+                    sx={{ 
+                        width: '100%', 
+                        display:'flex', 
+                        justifyContent: 'end'
+                    }}>
+                        <IconButton
+                            // sx={{
+                            //     backgroundColor:'red'
+                            // }}
+                            size="small"
                             onClick={()=>{
-                                props.close(false)
-                            }}
-                            style={{ 
-                                cursor: 'pointer',
-                                marginTop: 2,
-                                border: 'none', 
-                                borderWidth: 1,
-                                borderRadius: 3,
-                                backgroundColor: 'transparent', 
-                                color: '#F48200',
-                                fontWeight: 100,
-                                fontSize: 18
-                            }}>close</button>
+                            props.close(false)
+                        }}>
+                            <CloseIcon fontSize="inherit" />
+                        </IconButton>
                     </Box>
                     {
                         (props.details === "final_k")?

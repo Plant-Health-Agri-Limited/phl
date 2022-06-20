@@ -12,7 +12,7 @@ import routes from '../../../constants/routes'
 import { useRouter } from 'next/router'
 
 
-const farmer = '/images/steward_image.png'
+const farmer = '/images/steward_image.jpg'
 const sure_start_image = '/images/sure_start_image.jpeg'
 
 

@@ -13,7 +13,7 @@ import {
  import Footer from '../../utils/Footer'
  import Navbar from '../../navs/Navbar'
 
- const field = '/images/women_farming_garden.png'
+ const field = '/images/women_farming_garden.jpg'
 
  export default function AboutPage(){
      return(

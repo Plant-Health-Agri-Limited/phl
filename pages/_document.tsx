@@ -4,9 +4,8 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>PLant Health Agri Limited</title>
         <meta charSet="UTF-8"/>
-        <meta name="description" content="Plant Health Agri Limited is a wholly owned Zambian company focusing on agriculture. PHAL services both the small holder and commercial famers."/>
+        <meta name="description" content="Plant Health Agri Limited is a wholly owned Zambian company focusing on agriculture. PHAL services both the small holder and commercial farmers."/>
       </Head>
       <body>
         <Main />

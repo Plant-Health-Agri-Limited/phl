@@ -1,7 +1,7 @@
 :root {
-  --background-mage-1: url('/images/spraying_tractor.png');
-  --background-mage-2: url('/images/women_farming.png');
-  --footer-image: url('/images/footer-background.png');
+  --background-mage-1: url('/images/spraying_tractor.jpg');
+  --background-mage-2: url('/images/women_farming.jpg');
+  --footer-image: url('/images/footer-background.jpg');
   --link-color: rgb(0, 136, 0);
 }
 
@@ -54,9 +54,9 @@
 }
 
 /* selected link */
-a:active {
+/* a:active {
   color: blue;
-}
+} */
 
 
 /* slider */
@@ -67,7 +67,7 @@ a:active {
 
 
 /* links */
-a.mail-link{
+/* a.mail-link{
   text-decoration: none;
   font-size: 18px;
   border: 1px solid #4B9359;
@@ -76,7 +76,7 @@ a.mail-link{
   border-radius: 5px;
   color: white;
   background-color: #4B9359;
-}
+} */
 
 
 .before-scroll{
@@ -109,29 +109,9 @@ a.mail-link{
     transition: height 0.25s;
 }
 
-.box-pad{
-  border: 0px solid red;
-  width: 80px;
-  /* padding: 1px; */
-  padding-left: 1px;
-  padding-right: 1px;
-}
-
-
 /* Button styles */
-.custom-btn{
-    border: 0px solid red;
-    background-color: white;
-    width: 100%;
-    font-size: 14px;
-    cursor: pointer;
-    font-family:"Poppins Medium";
-    color: rgb(102, 102, 102);
-}
 
-
-
-.custom-btn-clicked{
+/* .custom-btn-clicked{
     padding:5px;
     border: 0;
     background-color: #4B9359;
@@ -139,19 +119,12 @@ a.mail-link{
     font-size: 14px;
     color: white;
     cursor: pointer;
-}
+} */
 
 .btn-line{
     margin-top: 5px;
     background-color: #4B9359;
     width: 0px;
-    height: 2px;
-}
-
-.btn-line-active{
-    margin-top: 5px;
-    background-color: #4B9359;
-    width: 100%;
     height: 2px;
 }
 
@@ -162,44 +135,11 @@ a.mail-link{
   height: 2px;
 }
 
-
-
-
-  a.test-link:link {
-    border: 0;
-    background-color: white;
-    color: black;
-    width: 70px;
-    font-size: 16px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-  }
-
-  a.test-link:visited {
-    border: 0;
-    background-color: white;
-    color: black;
-    width: 70px;
-    font-size: 16px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-  }
   
   .dialog{
     display: none;
-    /* right: 220px;
-    position: absolute;
-    background-color: white;
-    margin-top: 5px;
-    border-radius: 20px;
-    border: 1px solid rgb(255, 255, 255);
-    width: 250px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   }
+
   .show-dialog{
     padding: 5px;
     /* border: 1px solid red; */
@@ -235,7 +175,6 @@ a.mail-link{
   }
 
   .custom-btn:hover{
-    color: #4B9359;
   }
   .custom-btn:hover + .btn-line{
     cursor: pointer;
@@ -308,8 +247,6 @@ a.mail-link{
   }
 
   .card-class:hover > .card-details{
-    /* background-color: #4B9359; */
-    /* background-color: rgba(75, 147, 89, 0.5); */
     background-color: rgba(20, 20, 20, 0.8);
     cursor: pointer;
     animation-name: details;
@@ -363,13 +300,6 @@ a.mail-link{
         transform: scale(1.1);
     
     }
-  }
-
-  .label-form{
-    width: 100%;
-    font-size: 13px;
-    color: rgb(32, 32, 32);
-    font-family: "Poppins Regular";
   }
 
   .contact-button{

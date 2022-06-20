@@ -47,17 +47,11 @@ export default function ContactDetails(){
                                 }}>
                                 <Box 
                                     sx={{ 
-                                            width:'60px', 
-                                            height:'60px', 
                                             display:'flex',
                                             justifyContent:'center',
-                                            marginBottom:1,
-                                            marginRight:3,
-                                            borderRadius:'50px',
-                                            padding:1,
-                                            backgroundColor:'#4B9359'
+                                            marginRight:2,
                                         }}>
-                                    <Image width={400} height={400} src={mail} alt=""/>
+                                    <Image width={50} height={50} src={mail} objectFit="contain" alt=""/>
                                 </Box>
                                 <Typography component="div">
                                     <Box
@@ -103,17 +97,11 @@ export default function ContactDetails(){
                                 }}>
                                 <Box 
                                     sx={{ 
-                                        width:'60px', 
-                                        height:'60px', 
                                         display:'flex',
                                         justifyContent:'center',
-                                        marginBottom:1,
-                                        marginRight:3,
-                                        borderRadius:'50px',
-                                        padding:1,
-                                        backgroundColor:'#4B9359'
+                                        marginRight:2,
                                     }}>
-                                    <Image width={400} height={400} src={mobile} alt=""/>
+                                    <Image width={50} height={50} src={mobile} objectFit="contain" alt="phone icon"/>
                                 </Box>
                                 <Typography component="div">
                                     <Box

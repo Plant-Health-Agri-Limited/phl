@@ -14,7 +14,7 @@ import {
 
 
 
- const us = '/images/spraying_tractor.png'
+ const us = '/images/spraying_tractor.jpg'
 
  function ConctactAndLocation(){
     return(

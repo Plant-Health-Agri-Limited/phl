@@ -188,34 +188,6 @@
     100%  {width: 100%;}
   }
 
-  /***/
-  .drawer{
-    position: fixed;
-    background-color: #4B9359;
-    top:0;
-    left: -240px;
-    width: 240px;
-    height: 100vh;
-    box-shadow: 5px 0px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: left 0.25s;
-    z-index: 100;
-  }
-  .drawer-open{
-    position: fixed;
-    /* background-color: #4B9359; */
-    /* background-color: #4b9359; */
-    background: rgb(75,147,89);
-    background: linear-gradient(90deg, rgba(75,147,89,1) 1%, rgba(75,147,89,0.9108018207282913) 89%, rgba(75,147,89,0.8575805322128851) 100%);
-    top:0;
-    left: 0px;
-    width: 270px;
-    height: 100vh;
-    overflow-y: auto;
-    box-shadow: 5px 0px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: left 0.25s;
-    z-index: 100;
-  }
-
 
   /* card animations */
 

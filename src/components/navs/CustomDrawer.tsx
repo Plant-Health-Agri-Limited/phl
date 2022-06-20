@@ -27,13 +27,23 @@ const mobile_drawer_text = {
     fontFamily:'Poppins Medium'
 }
 
-function CustomDrawer(){
+const CustomDrawer = React.forwardRef((props:any, ref) => {
     const router = useRouter()
-    const [routepath, setRoutePath] = useState("")
     const [dropDownOpen, setDropDownOpen] = useState(false)
-    const [openDrawer, setOpenDrawer] = useState(false)
+    const {openDrawer, setOpenDrawer} = props
+    
     return(
-        <Box >
+        <Box
+        ref={ref} {...props} 
+        sx={{
+            position:'fixed',
+            top:0,
+            left:0,
+            width:250,
+            height:'100vh',
+            background:'linear-gradient(90deg, rgba(75,147,89,1) 1%, rgba(75,147,89,0.9108018207282913) 89%, rgba(75,147,89,0.8575805322128851) 100%)',
+            zIndex:100
+        }}>
             <Box
             sx={{
                 paddingLeft: 2,
@@ -274,4 +284,6 @@ function CustomDrawer(){
             </Box>
         </Box>
     );
-}
+});
+
+export default CustomDrawer

@@ -210,7 +210,8 @@ export default function EmailForm(){
                         <TextField
                             fullWidth
                             size="small"
-                            label="Your Email"
+                            // label="Your Email"
+                            placeholder="Enter your email" 
                             type="email" 
                             name="email" 
                             onChange={formik.handleChange}
@@ -222,7 +223,7 @@ export default function EmailForm(){
                         <TextField
                             fullWidth
                             size="small"
-                            label="Subject"
+                            // label="Subject"
                             type="text" 
                             placeholder="Enter subject" 
                             name="subject"
@@ -235,7 +236,7 @@ export default function EmailForm(){
                         <TextField   
                             fullWidth
                             size="small"
-                            label="Message"
+                            // label="Message"
                             name="message"
                             placeholder="Enter your message"
                             multiline

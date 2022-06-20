@@ -7,7 +7,8 @@ import {
     Toolbar, 
     Button,
     Typography,
-    Card 
+    Card, 
+    Slide
 } from '@mui/material'
 
 import Image from 'next/image';
@@ -16,6 +17,8 @@ import { useRouter } from 'next/router'
 import CustomLink from './CustomLink';
 import LinkWrapper from './LinkWrapper';
 import ProductLink from './ProductLink';
+import CustomDrawer from './CustomDrawer';
+
 var classNames = require('classnames');
 
 const logo = '/images/phl_logo_color.png'
@@ -182,6 +185,9 @@ export default function Navbar(){
                     </Button>
                 </Toolbar>      
             </Box>
+            <Slide direction="right" in={openDrawer} mountOnEnter unmountOnExit>            
+                <CustomDrawer openDrawer={openDrawer} setOpenDrawer={setOpenDrawer}/>
+            </Slide>
         </Box>
               
     );

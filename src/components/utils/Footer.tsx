@@ -5,7 +5,7 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import Image from 'next/image';
 import { useRouter } from 'next/router'
 import routes from '../../constants/routes';
-
+import SocialButtons from './SocialButtons';
 const logo = '/images/phl_logo_bw.png'
 
 const grid_style = {

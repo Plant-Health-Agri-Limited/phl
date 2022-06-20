@@ -286,4 +286,5 @@ const CustomDrawer = React.forwardRef((props:any, ref) => {
     );
 });
 
+CustomDrawer.displayName = 'CustomDrawer';
 export default CustomDrawer

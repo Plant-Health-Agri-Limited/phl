@@ -330,7 +330,6 @@ export default function DetailsDisplay(props:any){
                         sx={{
                             width:'100%',
                             height: '90%',
-                            overflowY:'auto'
                         }}>
                             <Typography component="div">
                                 <Box sx={{ 
@@ -400,7 +399,6 @@ export default function DetailsDisplay(props:any){
                         sx={{
                             width:'100%',
                             height: '90%',
-                            overflowY:'auto'
                         }}>
                             <Typography component="div">
                                 <Box sx={{ 
@@ -464,8 +462,7 @@ export default function DetailsDisplay(props:any){
                         <Box
                         sx={{
                             width:'100%',
-                            height: '90%',
-                            overflowY:'auto'
+                            height: '90%'
                         }}>
                             <Typography component="div">
                                 <Box sx={{ 
@@ -511,7 +508,6 @@ export default function DetailsDisplay(props:any){
                         sx={{
                             width:'100%',
                             height: '90%',
-                            overflowY:'auto'
                         }}>
                             <Typography component="div">
                                 <Box sx={{ 
@@ -575,8 +571,7 @@ export default function DetailsDisplay(props:any){
                         <Box
                         sx={{
                             width:'100%',
-                            height: '90%',
-                            overflowY:'auto'
+                            height: '90%'
                         }}>
                             <Typography component="div">
                                 <Box sx={{ 

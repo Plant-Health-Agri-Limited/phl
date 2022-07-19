@@ -8,8 +8,8 @@ import {
 
 import Image from 'next/image';
 
-const mail = '/images/mail.png'
-const mobile = '/images/mobile-phone.png'
+const mail = '/images/email.png'
+const mobile = '/images/phone-call.png'
 
 export default function ContactDetails(){
     return(
@@ -32,8 +32,8 @@ export default function ContactDetails(){
                             marginBottom:{
                                 lg: 0,
                                 md: 0,
-                                sm: 5,
-                                xs: 5
+                                sm: 3,
+                                xs: 3
                             }}}>
                         <Box 
                             sx={{ 
@@ -42,22 +42,26 @@ export default function ContactDetails(){
                             <Box
                                 sx={{
                                     width:'100%', 
-                                    display:'flex',
+                                    display:'block',
                                     marginBottom:2
                                 }}>
                                 <Box 
                                     sx={{ 
                                             display:'flex',
-                                            justifyContent:'center',
                                             marginRight:2,
                                         }}>
-                                    <Image width={50} height={50} src={mail} objectFit="contain" alt=""/>
+                                    <Image 
+                                        width={30} 
+                                        height={30} 
+                                        src={mail} 
+                                        objectFit="contain" 
+                                        alt=""/>
                                 </Box>
                                 <Typography component="div">
                                     <Box
                                         sx={{
                                             textAlign: 'start',
-                                            fontFamily:"Poppins Regular",
+                                            fontFamily:"Arial",
                                             fontSize:16
                                         }} >
                                         planthealth.ltd@gmail.com
@@ -65,7 +69,7 @@ export default function ContactDetails(){
                                     <Box
                                         sx={{
                                             textAlign: 'start',
-                                            fontFamily:"Poppins Regular",
+                                            fontFamily:"Arial",
                                             fontSize:16
                                         }} >
                                         info@planthealthagri.com
@@ -91,23 +95,33 @@ export default function ContactDetails(){
                             <Box
                                 sx={{
                                     width:'100%', 
-                                    display:'flex',
+                                    // display:'flex',
                                     marginBottom:1,
                                     
                                 }}>
                                 <Box 
                                     sx={{ 
-                                        display:'flex',
+                                        display:'block',
                                         justifyContent:'center',
                                         marginRight:2,
                                     }}>
-                                    <Image width={50} height={50} src={mobile} objectFit="contain" alt="phone icon"/>
+                                    <Image 
+                                        width={30} 
+                                        height={30} 
+                                        src={mobile} 
+                                        objectFit="contain" 
+                                        alt="phone icon"/>
                                 </Box>
-                                <Typography component="div">
+                                <Typography 
+                                component="div"
+                                sx={{
+                                    display:'flex',
+                                    alignItems:'center'
+                                }}>
                                     <Box
                                         sx={{
                                             textAlign: 'start',
-                                            fontFamily:"Poppins Regular",
+                                            fontFamily:"Arial",
                                             fontSize:16
                                         }}>
                                         +260 977505031<br/>

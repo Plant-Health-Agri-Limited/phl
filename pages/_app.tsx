@@ -24,7 +24,9 @@ const theme = createTheme({
           // backgroundColor:'red'
           '&.MuiTableRow-hover:hover': {
             cursor:'pointer',
-            backgroundColor: '#ffdbbd',
+            // backgroundColor: '#ffdbbd',
+            // backgroundColor: '#ffa74a',
+            backgroundColor: '#ffbc75'
           },
         },
       },

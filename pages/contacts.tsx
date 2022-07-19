@@ -8,7 +8,6 @@ const Contacts: NextPage = () => {
     <Head>
       <title>PHL | Contacts</title>
       <meta name="description" content="Get in touch, we would love to hear from you."/>
-      <meta name="robots" content="index, follow" />
     </Head>
     <ContactPage/>
   </main>

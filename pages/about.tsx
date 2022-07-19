@@ -7,7 +7,6 @@ const About: NextPage = () => {
     <main>
       <Head>
         <title>PHL | About us</title>
-        <meta name="robots" content="index, follow" />
       </Head>
       <AboutPage/>
     </main>

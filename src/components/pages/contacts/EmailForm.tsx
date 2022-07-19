@@ -75,14 +75,16 @@ export default function EmailForm(){
 
         onSubmit: async (values) => {
             setPlaySendAnimation(true)
-            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+            emailjs.sendForm('service_4ohuxbz', 'template_xbxfl3p', form.current, 'j_bVLFUYJaX0d2bvW')
             .then((result) => {
                 setPlaySendAnimation(false)
                 setSent(true)
                 setTimeout(function(){
                     setSent(false)
                 }, 3000)
+                formik.resetForm();
             }, (error) => {
+                console.log(error)
                 setPlaySendAnimation(false)
                 setSendFailed(true)
                 setTimeout(function(){
@@ -90,7 +92,7 @@ export default function EmailForm(){
                 }, 3000)
             });
 
-            formik.resetForm();
+            // formik.resetForm();
         },
     });
 
@@ -210,7 +212,6 @@ export default function EmailForm(){
                         <TextField
                             fullWidth
                             size="small"
-                            // label="Your Email"
                             placeholder="Enter your email" 
                             type="email" 
                             name="email" 
@@ -223,7 +224,6 @@ export default function EmailForm(){
                         <TextField
                             fullWidth
                             size="small"
-                            // label="Subject"
                             type="text" 
                             placeholder="Enter subject" 
                             name="subject"
@@ -236,7 +236,6 @@ export default function EmailForm(){
                         <TextField   
                             fullWidth
                             size="small"
-                            // label="Message"
                             name="message"
                             placeholder="Enter your message"
                             multiline

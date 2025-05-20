@@ -76,7 +76,7 @@ export default function HomeSlider()  {
                                         textAlign: 'center',
                                         wordWrap:'break-word'
                                     }}>
-                                    Leaders in Agrotechinnovations
+                                    Empowering Farmers, Enriching The Soil
                                 </Box>
                                 
                                 <Box sx={{
@@ -93,7 +93,7 @@ export default function HomeSlider()  {
                                             fontFamily:'Poppins Medium',
                                             marginBottom:3
                                         }}>
-                                        A company from your soil <br/>
+                                        Rooted In Zambia, Growing The Future <br/>
                                     </Box>
                                 <Box
                                 sx={{
@@ -160,7 +160,7 @@ export default function HomeSlider()  {
                                         textAlign: 'center',
                                         wordWrap:'break-word'
                                     }}>
-                                    Leaders in Agrotechinnovations
+                                    Empowering Farmers, Enriching The Soil
                                 </Box>
                                     
                                 <Box 
@@ -178,7 +178,7 @@ export default function HomeSlider()  {
                                         fontFamily:'Poppins Regular',
                                         marginBottom:2
                                     }}>
-                                    A company from your soil <br/>
+                                    Rooted In Zambia, Growing The Future <br/>
                                 </Box>
                                 <Box
                                 sx={{

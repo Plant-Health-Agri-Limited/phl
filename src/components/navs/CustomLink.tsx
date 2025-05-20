@@ -17,6 +17,7 @@ export default function CustomLink(props:any){
                     fontSize:14,
                     textAlign:'center',
                     fontFamily:'Poppins Medium',
+                    textTransform:'capitalize'
                 }}>
                     {routeName}
                 </a>

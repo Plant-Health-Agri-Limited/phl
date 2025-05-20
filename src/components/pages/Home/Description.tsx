@@ -95,13 +95,13 @@ function Description(){
                         Plant Health Agri Limited
                     </Typography>
                     <DescriptionText>
-                        Plant Health Agri Ltd is a wholly owned Zambian Company that is specialised in phytosanitary distribution.
+                        Plant Health Agri Ltd is a wholly owned Zambian Company that is specialised in agrucultural inputs distribution.
                     </DescriptionText>
                     <DescriptionText>
-                        We work with both small scale and commecial farmers customising crop protection solutions.
+                        We work with both small scale and commecial farmers customising crop protection and crop nutrition solutions.
                     </DescriptionText>
                     <DescriptionText>
-                        We pride ourselves as leaders in nanopesticides in central and southern Africa.
+                        We pride ourselves as leaders in bio&ndash;nutrition and bio&ndash;pesticides in central and southern Africa.
                     </DescriptionText>
                     <DescriptionText>
                         We help farmers reduce environmental impact and improve efficiency on fertilisers and perticides.

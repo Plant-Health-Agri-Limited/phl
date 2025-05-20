@@ -136,7 +136,7 @@ export default function Navbar(){
                     <LinkWrapper>
                         <CustomLink
                         routePath={routes.about}
-                        routeName="about"
+                        routeName="about us"
                         />
                         <div className={classNames({
                                 'btn-line-clicked': (routepath === routes.about)? true : false,

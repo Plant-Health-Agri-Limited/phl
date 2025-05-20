@@ -253,7 +253,7 @@ const CustomDrawer = React.forwardRef((props:any, ref) => {
                             setOpenDrawer(false)
                             router.push(routes.about)
                         }}
-                        >About</Box>
+                        >About Us</Box>
                 </Typography>
                 <Typography
                 component="div"

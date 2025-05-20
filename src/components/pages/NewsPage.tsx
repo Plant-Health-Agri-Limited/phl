@@ -81,7 +81,7 @@ import {
                         },
                         textAlign: 'center',
                     }}>
-                        News, Announcements and Partners
+                        News And Announcements
                     </Box>
                     <Box sx={{
                         color: 'white',
@@ -89,7 +89,7 @@ import {
                         fontSize: 20,
                         textAlign: 'center',
                     }}>
-                        Leaders in Agro Tech innovations
+                        Bringing you whats next in crop care
                     </Box>
                 </Typography>
             </Box>

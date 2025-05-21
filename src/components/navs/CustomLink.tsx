@@ -7,7 +7,7 @@ export default function CustomLink(props:any){
         sx={{
             display:'flex'
         }} 
-        className='custom-btn sds'>
+        className='custom-btn'>
             <Link href={routePath} >
                 <a 
                 style={{

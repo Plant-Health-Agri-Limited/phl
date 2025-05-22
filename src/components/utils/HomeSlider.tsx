@@ -76,7 +76,7 @@ export default function HomeSlider()  {
                                         textAlign: 'center',
                                         wordWrap:'break-word'
                                     }}>
-                                    Empowering Farmers, Enriching The Soil
+                                    Think Green, Grow Green!
                                 </Box>
                                 
                                 <Box sx={{
@@ -93,7 +93,7 @@ export default function HomeSlider()  {
                                             fontFamily:'Poppins Medium',
                                             marginBottom:3
                                         }}>
-                                        Rooted In Zambia, Growing The Future <br/>
+                                        Biosolutions for sustainable agriculture <br/>
                                     </Box>
                                 <Box
                                 sx={{
@@ -160,7 +160,7 @@ export default function HomeSlider()  {
                                         textAlign: 'center',
                                         wordWrap:'break-word'
                                     }}>
-                                    Empowering Farmers, Enriching The Soil
+                                    Think Green, Grow Green!
                                 </Box>
                                     
                                 <Box 
@@ -178,7 +178,7 @@ export default function HomeSlider()  {
                                         fontFamily:'Poppins Regular',
                                         marginBottom:2
                                     }}>
-                                    Rooted In Zambia, Growing The Future <br/>
+                                    Biosolutions for sustainable agriculture 
                                 </Box>
                                 <Box
                                 sx={{

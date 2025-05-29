@@ -9,6 +9,10 @@ const indingo_elite = '/images/indigo_elite.jpg'
 const wakanda = '/images/wakanda.jpeg'
 const frontier = '/images/Frontier-Optima_58904148_ZA_720x720.png'
 const focus_ultra = '/images/Focus-Ultra_58672962_ZA_300x300.png'
+const hammer = '/images/Hammer.png'
+const basagran = '/images/Basagran.png'
+const glofome = '/images/glofome.png'
+const atzol = '/images/atzol.jpg'
 
 export default function HerbicideElite(){
     return(
@@ -41,6 +45,26 @@ export default function HerbicideElite(){
             <Grid item xs={12} sm={6} md={4}>
                 <Box sx={{ ...productListContainer }}>
                     <CardDisplay productimage={focus_ultra} productname="Focus Ultra" productdetails="Focus Ultra" details_log="focus_ultra"/>
+                </Box>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+                <Box sx={{ ...productListContainer }}>
+                    <CardDisplay productimage={hammer} productname="Hammer" productdetails="Hamer" details_log="hammer"/>
+                </Box>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+                <Box sx={{ ...productListContainer }}>
+                    <CardDisplay productimage={basagran} productname="Basagran" productdetails="Basagran" details_log="basagran"/>
+                </Box>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+                <Box sx={{ ...productListContainer }}>
+                    <CardDisplay productimage={atzol} productname="Atzol" productdetails="Atzol" details_log="atzol"/>
+                </Box>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+                <Box sx={{ ...productListContainer }}>
+                    <CardDisplay productimage={glofome} productname="Glofome" productdetails="Glofome" details_log="glofome"/>
                 </Box>
             </Grid>
         </Grid>

@@ -177,7 +177,7 @@ export default function ProductView(){
                                 >
                                     <MenuItem value={1}>Liquid Fertilize</MenuItem>
                                     <MenuItem value={2}>Herbicide Elite</MenuItem>
-                                    <MenuItem value={9}>Herbicide</MenuItem>
+                                    {/* <MenuItem value={9}>Herbicide</MenuItem> */}
                                     <MenuItem value={3}>Fungicide</MenuItem>
                                     <MenuItem value={4}>Insectcide</MenuItem>
                                     <MenuItem value={5}>Biologocals</MenuItem>
@@ -253,7 +253,7 @@ export default function ProductView(){
                                 >
                                     Herbicide Elite
                                 </Box>
-                                <Box
+                                {/* <Box
                                     onClick={()=>{
                                         setButtonActive([false,false,false,false,false,false,false,false,true])
                                         setCategoryName("Herbicides")
@@ -272,7 +272,7 @@ export default function ProductView(){
                                     })}
                                 >
                                     Herbicides
-                                </Box>
+                                </Box> */}
                                 <Box
                                 onClick={()=>{
                                     setButtonActive([false,false,true,false,false,false,false,false])

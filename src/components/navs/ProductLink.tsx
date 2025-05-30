@@ -68,7 +68,7 @@ const ProductLink = () =>{
                     }} >
                         Herbicide Elite
                     </Box>
-                    <Box 
+                    {/* <Box 
                     className="dialog-text"
                     onClick={()=>{
                         router.push({
@@ -79,7 +79,7 @@ const ProductLink = () =>{
                         })
                     }} >
                         Herbicide
-                    </Box>
+                    </Box> */}
                     
                     <Box 
                     className="dialog-text"

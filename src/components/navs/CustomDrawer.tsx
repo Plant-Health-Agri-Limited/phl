@@ -149,7 +149,7 @@ const CustomDrawer = React.forwardRef((props:any, ref) => {
                         }}>
                             Herbicide Elite
                         </Box>
-                        <Box
+                        {/* <Box
                         sx={{
                             marginBottom:2
                         }}
@@ -163,7 +163,7 @@ const CustomDrawer = React.forwardRef((props:any, ref) => {
                             })
                         }}>
                             Herbicide
-                        </Box>
+                        </Box> */}
                         <Box
                         sx={{
                             marginBottom:2

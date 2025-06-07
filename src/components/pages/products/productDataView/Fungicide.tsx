@@ -48,49 +48,7 @@ export default function Fungicide(){
                 </Grid>
             </Grid>
 
-            <Box
-            sx={{
-                // border:'1px solid #e8e8e8',
-                borderRadius:5,
-                padding:3,
-                backgroundColor:bg2
-            }}>
-                <TableContainer sx={{ marginBottom: 2 }}>
-                    <Table size="small">
-                        <TableHead>
-                            <TableRow hover>
-                                <TableCell component="td" scope="row">
-                                </TableCell>
-                                <TableCell component="td" scope="row">
-                                    Products
-                                </TableCell>
-                                <TableCell component="td" scope="row">
-                                    Active Ingridient
-                                </TableCell>
-                            </TableRow>
-                        </TableHead>
-                        <TableBody>
-                        {
-                            fungicides_list.map((data, index)=>{
-                                return(
-                                    <TableRow key={index} hover>
-                                        <TableCell component="td" scope="row">
-                                            {index + 1}
-                                        </TableCell>
-                                        <TableCell component="td" scope="row">
-                                            {data.product}
-                                        </TableCell>
-                                        <TableCell component="td" scope="row">
-                                            {data.active_ingridient}
-                                        </TableCell>
-                                    </TableRow>
-                                );
-                            })
-                        }
-                        </TableBody>
-                    </Table>
-                </TableContainer>
-            </Box>
+            
         </>
     );
 }
